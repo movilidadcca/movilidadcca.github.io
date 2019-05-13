@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>Instituto Tecnológico de Buenos Aires</title>
+    <title>Universidad de Stuttgart</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="../css/estilos.css">
     <style media="screen">
-      {{ PHOTOS_BKG }}
+      .img1_b{background-image: url("https://lh3.googleusercontent.com/UExSKwNAAtqnUo6MrCjY3Avfzz-nyyV4ZVQij0Yk1RuB8AjrEvNbh5iix1OUm8vnBuBuo6NcjzfSULaEedNX4W5e24OnhjqW5fag0JtLP0o_pGsM-LtO9FwjJJXGz40eH782eCHG=w240");}
       .b_school{
         position: absolute;
         top: 0;
@@ -19,18 +19,18 @@
         opacity: 0.9;
       }
       .b_img_school{
-        background-image: url('{{ BKG_COUNTRY }}');
+        background-image: url('../imagenes/paises/alemania.png');
       }
     </style>
   </head>
   <body>
     <div class="header-name-ins">
-      <p>Instituto Tecnológico de Buenos Aires</p>
+      <p>Universidad de Stuttgart</p>
     </div>
     <section class="header-container b_img_school">
       <!--<div class="b_school"></div>-->
       <div class="header-images">
-        {{ UNIVERSITY_IMAGES }}
+        <div class="image1 backg img1_b"></div>
       </div>
     </section>
     <section class="institution-description">
@@ -52,7 +52,7 @@
         	   	<p class="advice">Alojamiento</p>
         	   	<p>Descubre algunos lugares que los estudiantes recomiendan para hospedarte en tu estancia.</p>
         		</a>
-        		<a href="https://drive.google.com/file/d/1bsuPuZ9ir5oR5CI7S8hMR1vNPkGk1i5p/view?usp=sharing"  target="_blank" class="lnk">
+        		<a href="https://drive.google.com/file/d/1n1mlYyUpVGORoLU_3_lMqHD9eEgXb21I/view?usp=sharing"  target="_blank" class="lnk">
               <img class="advice-image" src="../imagenes/testimonio.png">
         	   	<p class="advice">Experiencias</p>
               <p>Lee las vivencias que han tenido los alumnos que ya han participado en el Programa de Movilidad Académica.</p>
@@ -65,9 +65,9 @@
       		</div>
     	</div>
     </section>
-    <section style="display:none;" class="institution-videos">
+    <section  class="institution-videos">
       <p class="stories">Conoce historias</p>
-      <iframe class="instituion-video" {{ VIDEO }} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="instituion-video" src="https://www.youtube.com/embed/BCiy3WlZH_k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
   </body>
 </html>
