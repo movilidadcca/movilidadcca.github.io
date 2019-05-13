@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Universidad Politécnica de Valencia</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <style media="screen">
+      
+      .b_school{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: #cbcbcb99;
+        background-image: linear-gradient(225deg, #5c0227 0%, #d4d4d4 100%);
+        opacity: 0.9;
+      }
+      .b_img_school{
+        background-image: url('../imagenes/paises/españa.png');
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-name-ins">
+      <p>Universidad Politécnica de Valencia</p>
+    </div>
+    <section class="header-container b_img_school">
+      <!--<div class="b_school"></div>-->
+      <div class="header-images">
+        
+      </div>
+    </section>
+    <section class="institution-description">
+	<div class="institution-links">
+      		<p class="interesting-links">Enlaces de interés</p>
+      		<div class="lnks">
+        		<a href="#" target="_blank" class="lnk">
+              <img class="advice-image" src="../imagenes/recomendation.png">
+        	   	<p class="advice">Transporte</p>
+        	   	<p>Mira las recomendaciones de otros estudiantes para moverte por la ciudad.</p>
+        		</a>
+            <a href="#" target="_blank" class="lnk">
+              <img class="advice-image" src="../imagenes/recomendation.png">
+        	   	<p class="advice">Alimentación</p>
+        	   	<p>Aquí puedes ver como ahorrar en un tema tan importante como la comida.</p>
+        		</a>
+            <a href="#" target="_blank" class="lnk">
+              <img class="advice-image" src="../imagenes/recomendation.png">
+        	   	<p class="advice">Alojamiento</p>
+        	   	<p>Descubre algunos lugares que los estudiantes recomiendan para hospedarte en tu estancia.</p>
+        		</a>
+        		<a href="https://drive.google.com/file/d/1w3J8BZybzcUQ61IFZyMhQN4fATCXY12S/view?usp=sharing"  target="_blank" class="lnk">
+              <img class="advice-image" src="../imagenes/testimonio.png">
+        	   	<p class="advice">Experiencias</p>
+              <p>Lee las vivencias que han tenido los alumnos que ya han participado en el Programa de Movilidad Académica.</p>
+        		</a>
+        		<a href="{{ LINK_POS }}" style="display:none;" target="_blank" class="lnk">
+        	   	<img class="advice-image" src="{{ ICON_POS }}">
+              <p class="advice">Posters</p>
+              <p>Mira algunos montajes hechos por estudiantes.</p>
+            </a>
+      		</div>
+    	</div>
+    </section>
+    <section style="display:none;" class="institution-videos">
+      <p class="stories">Conoce historias</p>
+      <iframe class="instituion-video" {{ VIDEO }} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+  </body>
+</html>
