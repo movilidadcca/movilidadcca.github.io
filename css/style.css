@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?l8l2pm');
-  src:  url('../fonts/icomoon.eot?l8l2pm#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?l8l2pm') format('truetype'),
-    url('../fonts/icomoon.woff?l8l2pm') format('woff'),
-    url('../fonts/icomoon.svg?l8l2pm#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?uat7yq');
+  src:  url('../fonts/icomoon.eot?uat7yq#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?uat7yq') format('truetype'),
+    url('../fonts/icomoon.woff?uat7yq') format('woff'),
+    url('../fonts/icomoon.svg?uat7yq#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,51 +24,51 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-medal:before {
-  content: "\e900";
+.icon-search:before {
+  content: "\e986";
 }
-.icon-diamond:before {
-  content: "\e901";
-}
-.icon-dollar:before {
-  content: "\e902";
-}
-.icon-dollar1:before {
-  content: "\e903";
-}
-.icon-clipboard1:before {
-  content: "\e904";
-}
-.icon-profile:before {
-  content: "\e923";
-}
-.icon-coin-dollar:before {
-  content: "\e93b";
-}
-.icon-coin-euro:before {
-  content: "\e93c";
-}
-.icon-coin-pound:before {
-  content: "\e93d";
-}
-.icon-coin-yen:before {
-  content: "\e93e";
-}
-.icon-airplane:before {
-  content: "\e9af";
-}
-.icon-clipboard:before {
-  content: "\e9b8";
+.icon-menu:before {
+  content: "\e9bd";
 }
 .icon-menu2:before {
   content: "\e9be";
 }
-.icon-google2:before {
-  content: "\ea89";
+.icon-menu3:before {
+  content: "\e9bf";
+}
+.icon-menu4:before {
+  content: "\e9c0";
+}
+.icon-notification:before {
+  content: "\ea08";
+}
+.icon-question:before {
+  content: "\ea09";
+}
+.icon-info:before {
+  content: "\ea0c";
+}
+.icon-cancel-circle:before {
+  content: "\ea0d";
+}
+.icon-circle-up:before {
+  content: "\ea41";
+}
+.icon-circle-right:before {
+  content: "\ea42";
+}
+.icon-circle-down:before {
+  content: "\ea43";
+}
+.icon-circle-left:before {
+  content: "\ea44";
 }
 .icon-facebook2:before {
   content: "\ea91";
 }
-.icon-youtube:before {
-  content: "\ea9d";
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-youtube2:before {
+  content: "\ea9e";
 }

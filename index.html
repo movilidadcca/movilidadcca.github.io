@@ -1,85 +1,205 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Movilidad Académica Internacional</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/jvectormap.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <div class="MainContainer">
-      <header class="header-index">
-        <div class="header-index-container ">
-          <div class="header-title-container">
-            <img class="header-politecnico-logo" src="https://lh3.googleusercontent.com/te1s5pxh3EIAGpEwUkNVF_vUotjAxpbmSBndZzDV13wFdpqzt5a5qoVU_4xl7EHsKwE1FTVeL6IiOyDiWBR8ABYqobISqYY3B9Q7I3B6AcZ_WNHOAzg_XcpLYu0Kqd1dxynkWj8Wng=w2400">
-            <p class="p-instituto">Instituto Politécnico Nacional</p>
-          </div>
-          <div class="header-internacional">
-            <p class="header-internacional-texto">Movilidad Académica Internacional</p>
+    <header class="header-main">
+      <nav class="header-main-nav">
+        <div class="header-logo">
+          <img src="imagenes/logo_ipn.png" alt="">
+        </div>
+        <div class="header-menu">
+          <span class="icon-menu3 header-options"></span>
+          <ul class="header-menu-ul">
+            <li id="se">
+              <img src="imagenes/seguimiento.png">
+              <p>Guía de Seguimiento <span id="s"></span> </p>
+            </li>
+
+            <li id="pa">
+              <img src="imagenes/pagos.png">
+              <p>Formalización de Pagos <span id="s1"></span></p>
+            </li>
+
+            <li id="ex">
+              <img src="imagenes/exito.png" alt="">
+              <p>Casos de Éxito <span id="s2"></span></p>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="map-section">
+      <div class="world-container">
+        <div class="world-text">
+          <div class="world-text-container">
+            <p class="world-text-mov">Movilidad Académica</p>
+            <p class="world-text-search">Selecciona o busca algún país</p>
           </div>
         </div>
-      </header>
-      <section class="world-container">
-        <div class="world-container-title">
-          <div class="world-guia">
-            <p class="world-guia-text">Guía de Seguimiento</p>
-            <span class="icon-clipboard1"></span>
-          </div>
-          <div class="world-formalizacion">
-            <p class="world-formalizacion-text">Formalización de Pagos</p>
-            <span class="icon-dollar"></span>
-          </div>
-          <div class="world-exito">
-            <p class="world-exito-text">Casos de Éxito</p>
-            <span class="icon-medal"></span>
-          </div>
-          <div class="world-s">
-            <p class="world-container-selection">Selecciona un país</p>
-          </div>
+        <div id="world-map"></div>
+      </div>
+    </section>
+    <div class="search-bar">
+      <div class="search-bar-container">
+        <div class="search-text-container">
+          <span class="icon-search"></span>
+          <input type="search" placeholder="Busca países" class="search-text" name="" value="">
         </div>
-         <div id="world-map"></div>
-      </section>
-      <section class="universities-container invisible">
-        <!-- <div class="universities-container-gradient"></div> -->
-        <div class="universities-decoration"></div>
-        <div class="universities">
-          <!-- <div class="university university-length-35">
-            <p class="university-name">Universidad Politecnica de Madrid</p>
-          </div>
-          <div class="university university-length-35">
-            <p class="university-name">Universidad Politecnica de Barcelona</p>
-          </div>
-          <div class="university university-length-35">
-            <p class="university-name">Universidad Politecnica de Madrid</p>
-          </div> -->
+        <div class="search-button">
+          <p>Buscar</p>
         </div>
-        <div class="country">
-          <p class="country-name">Universidades en España</p>
-          <div class="">
-            <p class="country-useful-link" href="#">Directorio del país</p>
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
+
+    <section class="universities-main-container invisible">
+      <div class="universities-country-container">
+        <p class="universities-country">
+          Universidades en España
+        </p>
+      </div>
+      <div class="universities">
+
+        <div class="university-title"><div class="univerity-title-name"><p>Universidades</p></div><div class="univerity-title-others"><div class="university-title-ranking"><p>Ranking QS</p></div><div class="university-title-strenghts"><p>Área de mayor fortaleza</p></div></div></div>
+
+        <div class="university">
+          <div class="univerity-name">
+            <p>Universidad de Barcelona</p>
+            <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
+          </div>
+          <div class="university-others">
+            <div class="univerity-ranking">
+              <p>#4892</p>
+            </div>
+            <div class="university-strenghts">
+              <p>Algo va aquí</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="university">
+          <div class="univerity-name">
+            <p>Universidad Politécnica de Madrid</p>
+            <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
+          </div>
+          <div class="university-others">
+            <div class="univerity-ranking">
+              <p>#4892</p>
+            </div>
+            <div class="university-strenghts">
+              <p>Algo va aquí</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="university">
+          <div class="univerity-name">
+            <p>Universidad Politécnica de Madrid</p>
+            <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
+          </div>
+          <div class="university-others">
+            <div class="univerity-ranking">
+              <p>#4892</p>
+            </div>
+            <div class="university-strenghts">
+              <p>Algo va aquí</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="university">
+          <div class="univerity-name">
+            <p>Universidad Politécnica de Madrid</p>
+            <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
+          </div>
+          <div class="university-others">
+            <div class="univerity-ranking">
+              <p>#4892</p>
+            </div>
+            <div class="university-strenghts">
+              <p>Algo va aquí</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="university">
+          <div class="univerity-name">
+            <p>Universidad Politécnica de Madrid</p>
+            <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
+          </div>
+          <div class="university-others">
+            <div class="univerity-ranking">
+              <p>#4892</p>
+            </div>
+            <div class="university-strenghts">
+              <p>Algo va aquí</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="university">
+          <div class="univerity-name">
+            <p>Universidad Politécnica de Madrid</p>
+            <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
+          </div>
+          <div class="university-others">
+            <div class="univerity-ranking">
+              <p>#4892</p>
+            </div>
+            <div class="university-strenghts">
+              <p>Algo va aquí</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="university">
+          <div class="univerity-name">
+            <p>Universidad Politécnica de Madrid</p>
+            <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
+          </div>
+          <div class="university-others">
+            <div class="univerity-ranking">
+              <p>#4892</p>
+            </div>
+            <div class="university-strenghts">
+              <p>Algo va aquí</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="university">
+          <div class="univerity-name">
+            <p>Universidad Politécnica de Madrid</p>
+            <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
+          </div>
+          <div class="university-others">
+            <div class="univerity-ranking">
+              <p>#4892</p>
+            </div>
+            <div class="university-strenghts">
+              <p>Algo va aquí</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <footer>
+    </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script type="text/javascript" src="js/maps/jvectormap.min.js"></script>
     <script type="text/javascript" src="js/maps/world.js"></script>
     <script type="text/javascript">
       $(function(){
-
-        $('.world-s').click(() => {
-            $('html, body').animate({
-                scrollTop: $('.world-container-title').offset().top
-            }, 300);
-        });
-
-
-        // var plants = [
-        //     {name: 'EUA', coords: [50.9030599, 6.4213693], status: 'mrk'}
-        //   ];
-
         var more_info = {
           DE:{
 'schools':['Universidad de Stuttgart'],
@@ -87,10 +207,8 @@
 'isLarge':false
 },
 AR:{
-'schools':['Instituto Tecnológico de Buenos Aires',
-'Universidad Nacional del Nordeste'],
-'links':['paginas/Instituto_Tecnologico_de_Buenos_Aires.html',
-'paginas/Universidad_Nacional_del_Nordeste.html'],
+'schools':['Instituto Tecnológico de Buenos Aires'],
+'links':['paginas/Instituto_Tecnologico_de_Buenos_Aires.html'],
 'isLarge':false
 },
 AU:{
@@ -125,10 +243,10 @@ CA:{
 'isLarge':false
 },
 CL:{
-'schools':['Pontificia Universidad Católica de Chile',
+'schools':['Instituto Profesional DUOC UC',
 'Universidad San Sebastián',
 'Universidad Santiago de Chile'],
-'links':['paginas/Pontificia_Universidad_Catolica_de_Chile.html',
+'links':['paginas/Instituto_Profesional_DUOC_UC.html',
 'paginas/Universidad_San_Sebastian.html',
 'paginas/Universidad_Santiago_de_Chile.html'],
 'isLarge':false
@@ -142,10 +260,12 @@ CO:{
 'schools':['Colegio Mayor de Antioquía',
 'Escuela de Ingeniería de Antioquía',
 'Pontificia Universidad Javeriana',
+'Universidad de los Andes',
 'Universidad de Santo Tomás'],
 'links':['paginas/Colegio_Mayor_de_Antioquia.html',
 'paginas/Escuela_de_Ingenieria_de_Antioquia.html',
 'paginas/Pontificia_Universidad_Javeriana.html',
+'paginas/Universidad_de_los_Andes.html',
 'paginas/Universidad_de_Santo_Tomas.html'],
 'isLarge':false
 },
@@ -173,14 +293,12 @@ ES:{
 'Universidad de Alicante',
 'Universidad de Santiago de Compostela',
 'Universidad del País Vasco',
-'Universidad Politécnica de Cataluña',
-'Universidad Politécnica de Valencia'],
+'Universidad Politécnica de Cataluña'],
 'links':['paginas/Universidad_Autonoma_de_Barcelona.html',
 'paginas/Universidad_de_Alicante.html',
 'paginas/Universidad_de_Santiago_de_Compostela.html',
 'paginas/Universidad_del_Pais_Vasco.html',
-'paginas/Universidad_Politecnica_de_Cataluna.html',
-'paginas/Universidad_Politecnica_de_Valencia.html'],
+'paginas/Universidad_Politecnica_de_Cataluna.html'],
 'isLarge':false
 },
 US:{
@@ -230,8 +348,8 @@ JP:{
 'isLarge':false
 },
 LV:{
-'schools':[],
-'links':[],
+'schools':['Riga Technical University'],
+'links':['paginas/Riga_Technical_University.html'],
 'isLarge':false
 },
 MY:{
@@ -297,46 +415,10 @@ UY:{
 'links':[],
 'isLarge':false
 }
-          // ES: {
-          //   'schools': [
-          //     'Universidad Autónoma de Barcelona',
-          //     'Universidad de Alicante',
-          //     'Universidad de Almería',
-          //     'Universidad de Oviedo',
-          //     'Universidad de Santiago de Compostela',
-          //     'Universidad del País Vasco',
-          //     'Universidad del Rey Juan Carlos',
-          //     'Universidad Politécnica de Cataluña',
-          //     'Universidad Politécnica de Madrid',
-          //     'Universidad Politécnica de Valencia'
-          //   ],
-          //   'links': [
-          //     '#',
-          //     '#',
-          //     '#',
-          //     '#',
-          //     '#',
-          //     '#',
-          //     '#',
-          //     '#',
-          //     'paginas/plantilla.html',
-          //     '#'
-          //   ],
-          //   'isLarge': true
-          // },
-          // CA: {
-          //   'schools': [
-          //     "Bishop's University",
-          //     "École de Technologie Supérieure",
-          //     "École Polytechnique de Montreal",
-          //     "Regina's University"
-          //   ],
-          //   'isLarge': false
-          // }
         };
 
         var countries = {
-            DE:'ALEMANIA',
+          DE:'ALEMANIA',
 AR:'ARGENTINA',
 BE:'BÉLGICA',
 BR:'BRASIL',
@@ -353,12 +435,13 @@ FI:'FINLANDIA',
 FR:'FRANCIA',
 IT:'ITALIA',
 JP:'JAPÓN',
+LV:'LETONÍA',
 PE:'PERÚ',
 PL:'POLONIA',
 PT:'PORTUGAL',
 CZ:'REPÚBLICA CHECA',
 SE:'SUECIA'
-        }
+        };
 
         var colors = {};
 
@@ -366,28 +449,53 @@ SE:'SUECIA'
           colors[key] = '#5D0227';
         }
 
+        function adjust_string(s){
+          new_s = '';
+          counter = 0;
+          for(let i = 0; i < s.length; i++){
+            if(counter == 0){
+              new_s += s[i].toUpperCase();
+              counter++;
+            }
+            else if(s[i] == ' '){
+              counter = 0;
+              new_s += ' ';
+            }
+            else{
+              new_s += s[i].toLowerCase();
+            }
+          }
+          return new_s;
+        }
 
         mapObj = new jvm.Map({
           container: $('#world-map'),
           map: 'world_mill',
-          backgroundColor: 'rgba(193, 193, 193, 0.4)',
+          backgroundColor: 'rgba(243, 243, 243, 1)',
           zoomOnScroll: false,
+          regionStyle: {
+            hover: {
+              fill: '#00b2c0'
+            }
+          },
           // markers: plants.map(function(h){ return {name: h.name, latLng: h.coords} }),
+          // series: {
+          //     regions: [{
+          //     values: colors
+          //   }],
+          // },
+          // colors: colors,
           series: {
             regions: [{
-            values: colors
-          }],
-            // markers: [{
-            //   attribute: 'image',
-            //   scale: {
-            //     'mrk': 'marker.png'
-            //   },
-            //   values: plants.reduce(function(p, c, i){ p[i] = c.status; return p }, {})
-            // }]
+              attribute: 'fill'
+            }]
           },
-          // colors: colors,
-          hoverOpacity: 0.7, // opacity for :hover
-        	hoverColor: false,
+          hoverOpacity: 1, // opacity for :hover
+        	hoverColor: 'rgba(78, 244, 233, 1)',
+          onRegionOver: function(event, code, region){
+            if(!(code in countries))
+              event.preventDefault();
+          },
           onRegionTipShow: function(event, label, code){
             if(code in countries)
               label.html(countries[code]);
@@ -395,29 +503,83 @@ SE:'SUECIA'
               event.preventDefault();
          },
          onRegionClick: function(event, code){
-            if( !(code in more_info) )
-              return null;
-            $('.universities-container').removeClass('invisible');
-            let c = more_info[code];
-            let $container = $('.universities');
-            let i = 0;
-            $container.html('');
-            c.schools.forEach(function(school){
-              $container.append(
-                '<a href="'+ ((c.links[i] !== '#') ? (c.links[i] + '"') : '#"') +'class="university ' + ((c.isLarge) ? 'university-length-35':'university-length-100') + '">' +
-                '<p class="university-name"> ' + school + ' </p>' +
-                '</a>'
-              );
-              i += 1;
-            });
-            $('.country-name').html('Universidades en ' + countries[code]);
-            $('html, body').animate({
-               scrollTop: $('.universities-container').offset().top
-             }, 300);
+           if( !(code in countries) )
+             return null;
+
+           $('.universities-country').html('Universidades en '+adjust_string(countries[code]));
+           $('.universities-main-container').removeClass('invisible');
+           let c = more_info[code];
+           let $container = $('.universities');
+           let i = 0;
+           $container.html('<div class="university-title"><div class="univerity-title-name"><p>Universidades</p></div><div class="univerity-title-others"><div class="university-title-ranking"><p>Ranking QS</p></div><div class="university-title-strenghts"><p>Área de mayor fortaleza</p></div></div></div>');
+           c.schools.forEach(function(school){
+             $container.append(
+               '<div class="university">' +
+                 '<div class="univerity-name">' +
+                   '<p>'+ school +'</p>' +
+                   '<p><a class="school_link" href="'+ ((c.links[i] !== '#') ? (c.links[i]) : '#') +'"><span class="icon-circle-right arrow"></span><span>ver más</span></a></p>' +
+                 '</div>' +
+                 '<div class="university-others">' +
+                   '<div class="univerity-ranking">' +
+                     '<p>#4892</p>' +
+                   '</div>' +
+                   '<div class="university-strenghts">' +
+                     '<p>Algo va aquí</p>' +
+                   '</div>' +
+                 '</div>' +
+               '</div>'
+             );
+             i += 1;
+           });
+
+           $('html, body').animate({
+              scrollTop: $('.universities-main-container').offset().top
+            }, 400);
          }
         });
-      });
 
+        generateColors = function(){
+          var colors = {},
+              key;
+
+          for (key in mapObj.regions) {
+            colors[key] = "#f3f3f3";
+            //colors[key] = "#838383";
+          }
+          return colors;
+        }
+
+        mapObj.series.regions[0].setValues(generateColors());
+
+        var toggle = true;
+        $('.header-options').on('click', function(event){
+          $(this).toggleClass('icon-menu3');
+          $(this).toggleClass('icon-menu4');
+          if(toggle){
+            toggle = false;
+            document.querySelector('.header-menu-ul').style.display="block";
+          }
+          else{
+            toggle = true;
+            document.querySelector('.header-menu-ul').style.display="none";
+          }
+        });
+
+        $(window).resize(function(){
+          toggle = true;
+          $('.header-options').removeClass('icon-menu4');
+          $('.header-options').addClass('icon-menu3');
+          console.log($(this).width());
+          if($(this).width() >= 500){
+            document.querySelector('.header-menu-ul').style.display="flex";
+          }
+          else{
+            document.querySelector('.header-menu-ul').style.display="none";
+          }
+        });
+
+      });
     </script>
+
   </body>
 </html>

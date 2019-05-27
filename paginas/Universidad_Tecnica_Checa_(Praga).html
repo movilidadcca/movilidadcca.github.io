@@ -1,73 +1,85 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="es" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <title>Universidad Técnica Checa (Praga)</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="../css/estilos.css">
-    <style media="screen">
-      {{ PHOTOS_BKG }}
-      .b_school{
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        background-color: #cbcbcb99;
-        background-image: linear-gradient(225deg, #5c0227 0%, #d4d4d4 100%);
-        opacity: 0.9;
-      }
-      .b_img_school{
-        background-image: url('{{ BKG_COUNTRY }}');
-      }
-    </style>
+    <title>Movilidad Académica Internacional</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/styles.css">
   </head>
   <body>
-    <div class="header-name-ins">
-      <p>Universidad Técnica Checa (Praga)</p>
-    </div>
-    <section class="header-container b_img_school">
-      <!--<div class="b_school"></div>-->
-      <div class="header-images">
-        {{ UNIVERSITY_IMAGES }}
+
+    <header class="header-main header-main-fixed">
+      <div class="header-main-university-container">
+        <p class="header-main-univerity">Universidad Técnica Checa (Praga)</p>
+      </div>
+    </header>
+
+    <section id="sectionPhotos" class="photos-main-container">
+      <div class="photos-loading">
+        <img src="../imagenes/loading.svg">
+      </div>
+      <input type="hidden" value="https://lh3.googleusercontent.com/0RqwRgrubRdIXSyisAgliaK1meAtZHB1aTPqMOqzMfD8xg--HZ5gSsG5QlkxIAdvhbDJvXms4B0aGVg9jHHZPRrjZ8MwLpPMWYaemygO_DtcskIgJIOvsFWkj2aRFeMm_uO4xtAx2w=w2400">
+      <div class="photos"></div>
+    </section>
+
+    <section class="interesting-links-main-container">
+      <div class="interesting-links-title-container">
+        <p class="interesting-links-title">
+          Enlaces de interes
+        </p>
+      </div>
+      <div class="interesting-links-container">
+        <a href="https://drive.google.com/file/d/1osUpngFZ68ENfi9v8fnQQ-wZ-LjN94P2/view?usp=sharing" class="interesting-link">
+          <input type="hidden" class="link">
+          <div class="interesting-link-photo-container">
+            <img class="interesting-link-photo" src="../imagenes/ALIMENTACION-01-01.png">
+          </div>
+          <p class="interesting-link-title">Alimentación</p>
+          <p class="interesting-link-description">Aquí puedes ver como ahorrar en un tema tan importante como la comida</p>
+        </a>
+        <a href="https://drive.google.com/file/d/1-lIMH6yg8Ce2gDSVCJ16H6XVekGDHGSv/view?usp=sharing" class="interesting-link">
+          <input type="hidden" class="link">
+          <div class="interesting-link-photo-container">
+            <img class="interesting-link-photo" src="../imagenes/ALOJAMIENTO-01-01.png">
+          </div>
+          <p class="interesting-link-title">Alojamiento</p>
+          <p class="interesting-link-description">Descubre algunos lugares que los estudiantes recomiendadn para hospedarte en una estancia</p>
+        </a>
+        <a href="https://drive.google.com/file/d/1xbdEnFqKF3SLr10xWTHoJEw7bQlqmDpR/view?usp=sharin" class="interesting-link">
+          <input type="hidden" class="link">
+          <div class="interesting-link-photo-container">
+            <img class="interesting-link-photo" src="../imagenes/TRANSPORTE-01-01.png">
+          </div>
+          <p class="interesting-link-title">Transporte</p>
+          <p class="interesting-link-description">Mira las recomendaciones de otros estudiantes para moverte por la ciudad</p>
+        </a>
+        <a style="display:none;" href="{{ LINK_EXP }}" class="interesting-link">
+          <input type="hidden" class="link">
+          <div class="interesting-link-photo-container">
+            <img class="interesting-link-photo" src="../imagenes/EXPERIENCIAS-01-01.png">
+          </div>
+          <p class="interesting-link-title">Experiencias</p>
+          <p class="interesting-link-description">Lee las vivencias que han tenido los alumnos que ya han participado en el Programa de Movilidad Académica</p>
+        </a>
       </div>
     </section>
-    <section class="institution-description">
-	<div class="institution-links">
-      		<p class="interesting-links">Enlaces de interés</p>
-      		<div class="lnks">
-        		<a href="#" target="_blank" class="lnk">
-              <img class="advice-image" src="../imagenes/recomendation.png">
-        	   	<p class="advice">Transporte</p>
-        	   	<p>Mira las recomendaciones de otros estudiantes para moverte por la ciudad.</p>
-        		</a>
-            <a href="#" target="_blank" class="lnk">
-              <img class="advice-image" src="../imagenes/recomendation.png">
-        	   	<p class="advice">Alimentación</p>
-        	   	<p>Aquí puedes ver como ahorrar en un tema tan importante como la comida.</p>
-        		</a>
-            <a href="#" target="_blank" class="lnk">
-              <img class="advice-image" src="../imagenes/recomendation.png">
-        	   	<p class="advice">Alojamiento</p>
-        	   	<p>Descubre algunos lugares que los estudiantes recomiendan para hospedarte en tu estancia.</p>
-        		</a>
-        		<a href="{{ LINK_EXP }}" style="display:none;" target="_blank" class="lnk">
-              <img class="advice-image" src="{{ ICON_EXP }}">
-        	   	<p class="advice">Experiencias</p>
-              <p>Lee las vivencias que han tenido los alumnos que ya han participado en el Programa de Movilidad Académica.</p>
-        		</a>
-        		<a href="{{ LINK_POS }}" style="display:none;" target="_blank" class="lnk">
-        	   	<img class="advice-image" src="{{ ICON_POS }}">
-              <p class="advice">Posters</p>
-              <p>Mira algunos montajes hechos por estudiantes.</p>
-            </a>
-      		</div>
-    	</div>
+
+    <section  class="video-main-container">
+      <div class="video-title-container">
+        <p class="video-title">
+          Conoce historias
+        </p>
+      </div>
+      <div class="video-container">
+        <iframe class="video-player" src="https://www.youtube.com/embed/_DM5pN_ABnk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </section>
-    <section style="display:none;" class="institution-videos">
-      <p class="stories">Conoce historias</p>
-      <iframe class="instituion-video" {{ VIDEO }} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </section>
+
+    <script type="text/javascript" src = "../js/actions.js"></script>
+    <script type="text/javascript">
+
+    </script>
   </body>
 </html>
