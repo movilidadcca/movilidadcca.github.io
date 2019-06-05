@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Movilidad Académica Internacional</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/jvectormap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header class="header-main">
+      <nav class="header-main-nav">
+        <div class="header-logo">
+          <img src="imagenes/logo_ipn.png" alt="">
+        </div>
+        <div class="header-menu">
+          <span class="icon-menu3 header-options"></span>
+          <ul class="header-menu-ul">
+            <li id="se">
+              <img src="imagenes/seguimiento.png">
+              <p>Guía de Seguimiento <span id="s"></span> </p>
+            </li>
+
+            <li id="pa">
+              <img src="imagenes/pagos.png">
+              <p>Formalización de Pagos <span id="s1"></span></p>
+            </li>
+
+            <li id="ex">
+              <img src="imagenes/exito.png" alt="">
+              <p>Casos de Éxito <span id="s2"></span></p>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="map-section">
+      <div class="world-container">
+        <div class="world-text">
+          <div class="world-text-container">
+            <p class="world-text-mov">Movilidad Académica</p>
+            <p class="world-text-search">Selecciona o busca algún país</p>
+          </div>
+        </div>
+        <div id="world-map"></div>
+      </div>
+    </section>
+    <div class="search-bar">
+      <div class="search-bar-container">
+        <div class="search-results-container">
+          <div class="search-results">
+            
+          </div>
+        </div>
+        <div class="search-text-container">
+          <span class="icon-search"></span>
+          <input type="search" placeholder="Busca países" class="search-text" name="" value="">
+        </div>
+      </div>
+    </div>
+
+    <section class="universities-main-container invisible">
+      <div class="universities-country-container">
+        <p class="universities-country">
+          Universidades en España
+        </p>
+      </div>
+      <div class="university-directory-main-container">
+        <a class="university-directory-link" target="_blank">
+          <div class="university-directory">
+            <img src="imagenes/AGENDA.png" class="university-directory-img">
+            <p class="university-directory-p">Mira donde se han hospedado otros alumnos en el directorio del país.</p>
+          </div>
+        </a>
+      </div>
+      <div class="universities">
+
+      <div class="university-title">
+        <div class="univerity-title-name"><p>Universidades</p></div>
+        <div class="univerity-title-others">
+          <div class="university-title-ranking"><p>Ranking QS</p></div>
+        </div>
+      </div>
+
+        <!--<div class="university">
+          <div class="univerity-name">
+            <p>Universidad de Barcelona</p>
+            <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
+          </div>
+          <div class="university-others">
+            <div class="univerity-ranking">
+              <p>#4892</p>
+            </div>
+            <div class="university-strenghts">
+              <p>Algo va aquí</p>
+            </div>
+          </div>
+        </div>-->
+
+      </div>
+
+    </section>
+
+    <footer>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/maps/jvectormap.min.js"></script>
+    <script type="text/javascript" src="js/maps/world.js"></script>
+    <script type="text/javascript">
+
+      function adjust_string(s){
+          new_s = '';
+          counter = 0;
+          for(let i = 0; i < s.length; i++){
+            if(counter == 0){
+              new_s += s[i].toUpperCase();
+              counter++;
+            }
+            else if(s[i] == ' '){
+              counter = 0;
+              new_s += ' ';
+            }
+            else{
+              new_s += s[i].toLowerCase();
+            }
+          }
+          return new_s;
+        }
+
+      function mostrar(code){
+          $('.universities-country').html('Universidades en '+adjust_string(countries[code][0]));
+          $('.university-directory-link').attr('href', countries[code][1]);
+          $('.universities-main-container').removeClass('invisible');
+          $('.search-results').html('');
+          let c = more_info[code];
+          let $container = $('.universities');
+          let i = 0;
+          
+          $container.html('<div class="university-title">'+
+            '<div class="univerity-title-name"><p>Universidades</p></div>'+
+            '<div class="univerity-title-others">'+
+            '<div class="university-title-ranking"><p>Ranking QS</p></div>'+
+            '</div>'+
+            '</div>');
+           // $container.html('<div class="university-title"><div class="univerity-title-name"><p>Universidades</p></div><div class="univerity-title-others"><div class="university-title-ranking"><p>Ranking QS</p></div><div class="university-title-strenghts"><p>Área de mayor fortaleza</p></div></div></div>');
+           c.schools.forEach(function(school){
+             $container.append(
+               '<div class="university">' +
+                 '<div class="univerity-name">' +
+                   '<p>'+ school +'</p>' +
+                   '<p><a class="school_link" href="'+ ((c.links[i] !== '#') ? (c.links[i]) : '#') +'"><span class="icon-circle-right arrow"></span><span>ver más</span></a></p>' +
+                 '</div>' +
+                 '<div class="university-others">' +
+                   '<div class="univerity-ranking">' +
+                     '<p>' + 'c.rankings[i] '+ '</p>' +
+                   '</div>' +
+                 //   '<div class="university-strenghts">' +
+                 //     '<p>Algo va aquí</p>' +
+                 //   '</div>' +
+                 '</div>' +
+               '</div>'
+             );
+             i += 1;
+           });
+
+           $('html, body').animate({
+              scrollTop: $('.universities-main-container').offset().top
+            }, 400);
+           console.log(more_info[code]);
+        }
+
+        var more_info = {
+          {{ MORE_INFO }}
+        };
+
+        var countries = {
+          {{ COUNTRIES }}
+        };
+
+
+      $(function(){
+
+        var colors = {};
+
+        for(let key in countries){
+          colors[key] = '#5D0227';
+        }        
+
+        mapObj = new jvm.Map({
+          container: $('#world-map'),
+          map: 'world_mill',
+          backgroundColor: 'rgba(243, 243, 243, 1)',
+          zoomOnScroll: false,
+          regionStyle: {
+            hover: {
+              fill: '#00b2c0'
+            }
+          },
+          // markers: plants.map(function(h){ return {name: h.name, latLng: h.coords} }),
+          // series: {
+          //     regions: [{
+          //     values: colors
+          //   }],
+          // },
+          // colors: colors,
+          series: {
+            regions: [{
+              attribute: 'fill'
+            }]
+          },
+          hoverOpacity: 1, // opacity for :hover
+          hoverColor: 'rgba(78, 244, 233, 1)',
+          onRegionOver: function(event, code, region){
+            if(!(code in countries))
+              event.preventDefault();
+          },
+          onRegionTipShow: function(event, label, code){
+            if(code in countries)
+              label.html(countries[code][0]);
+            else
+              event.preventDefault();
+         },
+         onRegionClick: function(event, code){
+           if( !(code in countries) )
+             return null;
+            mostrar(code);
+         }
+        });
+
+        generateColors = function(){
+          var colors = {},
+              key;
+
+          for (key in mapObj.regions) {
+            colors[key] = "#f3f3f3";
+            //colors[key] = "#838383";
+          }
+          return colors;
+        }
+
+        mapObj.series.regions[0].setValues(generateColors());
+
+        var toggle = true;
+        $('.header-options').on('click', function(event){
+          $(this).toggleClass('icon-menu3');
+          $(this).toggleClass('icon-menu4');
+          if(toggle){
+            toggle = false;
+            document.querySelector('.header-menu-ul').style.display="block";
+          }
+          else{
+            toggle = true;
+            document.querySelector('.header-menu-ul').style.display="none";
+          }
+        });
+
+        $('.search-text').on('keyup', function(event){
+          $('.search-results').html('');
+          if($(this).val().length <= 0) return;
+          for(const [key, value] of Object.entries(countries)){
+            if( value[0].indexOf($(this).val().toUpperCase()) !== -1){
+              $('.search-results').append(
+                '<div class="search-result" onclick="mostrar(\''+key.toUpperCase()+'\');">'+
+                  '<p class="search-result-p">'+value[0]+'</p>'+
+                '</div>'
+              );
+              $('.search-results-container').css('top', -$('.search-results-container').height()+'px');
+            }
+          }
+        });
+
+        $(window).resize(function(){
+          toggle = true;
+          $('.header-options').removeClass('icon-menu4');
+          $('.header-options').addClass('icon-menu3');
+          if($(this).width() >= 500){
+            document.querySelector('.header-menu-ul').style.display="flex";
+          }
+          else{
+            document.querySelector('.header-menu-ul').style.display="none";
+          }
+        });
+
+      });
+    </script>
+
+  </body>
+</html>

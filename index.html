@@ -49,12 +49,14 @@
     </section>
     <div class="search-bar">
       <div class="search-bar-container">
+        <div class="search-results-container">
+          <div class="search-results">
+
+          </div>
+        </div>
         <div class="search-text-container">
           <span class="icon-search"></span>
           <input type="search" placeholder="Busca países" class="search-text" name="" value="">
-        </div>
-        <div class="search-button">
-          <p>Buscar</p>
         </div>
       </div>
     </div>
@@ -65,11 +67,24 @@
           Universidades en España
         </p>
       </div>
+      <div class="university-directory-main-container">
+        <a class="university-directory-link" target="_blank">
+          <div class="university-directory">
+            <img src="imagenes/AGENDA.png" class="university-directory-img">
+            <p class="university-directory-p">Mira donde se han hospedado otros alumnos en el directorio del país.</p>
+          </div>
+        </a>
+      </div>
       <div class="universities">
 
-        <div class="university-title"><div class="univerity-title-name"><p>Universidades</p></div><div class="univerity-title-others"><div class="university-title-ranking"><p>Ranking QS</p></div><div class="university-title-strenghts"><p>Área de mayor fortaleza</p></div></div></div>
+      <div class="university-title">
+        <div class="univerity-title-name"><p>Universidades</p></div>
+        <div class="univerity-title-others">
+          <div class="university-title-ranking"><p>Ranking QS</p></div>
+        </div>
+      </div>
 
-        <div class="university">
+        <!--<div class="university">
           <div class="univerity-name">
             <p>Universidad de Barcelona</p>
             <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
@@ -82,114 +97,10 @@
               <p>Algo va aquí</p>
             </div>
           </div>
-        </div>
-
-        <div class="university">
-          <div class="univerity-name">
-            <p>Universidad Politécnica de Madrid</p>
-            <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
-          </div>
-          <div class="university-others">
-            <div class="univerity-ranking">
-              <p>#4892</p>
-            </div>
-            <div class="university-strenghts">
-              <p>Algo va aquí</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="university">
-          <div class="univerity-name">
-            <p>Universidad Politécnica de Madrid</p>
-            <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
-          </div>
-          <div class="university-others">
-            <div class="univerity-ranking">
-              <p>#4892</p>
-            </div>
-            <div class="university-strenghts">
-              <p>Algo va aquí</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="university">
-          <div class="univerity-name">
-            <p>Universidad Politécnica de Madrid</p>
-            <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
-          </div>
-          <div class="university-others">
-            <div class="univerity-ranking">
-              <p>#4892</p>
-            </div>
-            <div class="university-strenghts">
-              <p>Algo va aquí</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="university">
-          <div class="univerity-name">
-            <p>Universidad Politécnica de Madrid</p>
-            <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
-          </div>
-          <div class="university-others">
-            <div class="univerity-ranking">
-              <p>#4892</p>
-            </div>
-            <div class="university-strenghts">
-              <p>Algo va aquí</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="university">
-          <div class="univerity-name">
-            <p>Universidad Politécnica de Madrid</p>
-            <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
-          </div>
-          <div class="university-others">
-            <div class="univerity-ranking">
-              <p>#4892</p>
-            </div>
-            <div class="university-strenghts">
-              <p>Algo va aquí</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="university">
-          <div class="univerity-name">
-            <p>Universidad Politécnica de Madrid</p>
-            <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
-          </div>
-          <div class="university-others">
-            <div class="univerity-ranking">
-              <p>#4892</p>
-            </div>
-            <div class="university-strenghts">
-              <p>Algo va aquí</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="university">
-          <div class="univerity-name">
-            <p>Universidad Politécnica de Madrid</p>
-            <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
-          </div>
-          <div class="university-others">
-            <div class="univerity-ranking">
-              <p>#4892</p>
-            </div>
-            <div class="university-strenghts">
-              <p>Algo va aquí</p>
-            </div>
-          </div>
-        </div>
+        </div>-->
 
       </div>
+
     </section>
 
     <footer>
@@ -199,257 +110,8 @@
     <script type="text/javascript" src="js/maps/jvectormap.min.js"></script>
     <script type="text/javascript" src="js/maps/world.js"></script>
     <script type="text/javascript">
-      $(function(){
-        var more_info = {
-          DE:{
-'schools':['Universidad de Stuttgart'],
-'links':['paginas/Universidad_de_Stuttgart.html'],
-'isLarge':false
-},
-AR:{
-'schools':['Instituto Tecnológico de Buenos Aires'],
-'links':['paginas/Instituto_Tecnologico_de_Buenos_Aires.html'],
-'isLarge':false
-},
-AU:{
-'schools':[],
-'links':[],
-'isLarge':false
-},
-AT:{
-'schools':[],
-'links':[],
-'isLarge':false
-},
-BE:{
-'schools':['Universidad Católica de Lovaina'],
-'links':['paginas/Universidad_Catolica_de_Lovaina.html'],
-'isLarge':false
-},
-BR:{
-'schools':['Universidad de Sao Paulo',
-'Universidad Estatal de Campinas',
-'Universidad Estatal Paulista'],
-'links':['paginas/Universidad_de_Sao_Paulo.html',
-'paginas/Universidad_Estatal_de_Campinas.html',
-'paginas/Universidad_Estatal_Paulista.html'],
-'isLarge':false
-},
-CA:{
-'schools':['Bishop_s University',
-'Universidad de Regina'],
-'links':['paginas/Bishop_s_University.html',
-'paginas/Universidad_de_Regina.html'],
-'isLarge':false
-},
-CL:{
-'schools':['Instituto Profesional DUOC UC',
-'Universidad San Sebastián',
-'Universidad Santiago de Chile'],
-'links':['paginas/Instituto_Profesional_DUOC_UC.html',
-'paginas/Universidad_San_Sebastian.html',
-'paginas/Universidad_Santiago_de_Chile.html'],
-'isLarge':false
-},
-CN:{
-'schools':['Universidad de Beihang'],
-'links':['paginas/Universidad_de_Beihang.html'],
-'isLarge':false
-},
-CO:{
-'schools':['Colegio Mayor de Antioquía',
-'Escuela de Ingeniería de Antioquía',
-'Pontificia Universidad Javeriana',
-'Universidad de los Andes',
-'Universidad de Santo Tomás'],
-'links':['paginas/Colegio_Mayor_de_Antioquia.html',
-'paginas/Escuela_de_Ingenieria_de_Antioquia.html',
-'paginas/Pontificia_Universidad_Javeriana.html',
-'paginas/Universidad_de_los_Andes.html',
-'paginas/Universidad_de_Santo_Tomas.html'],
-'isLarge':false
-},
-KR:{
-'schools':['Universidad de Hankuk',
-'Universidad Hanyang'],
-'links':['paginas/Universidad_de_Hankuk.html',
-'paginas/Universidad_Hanyang.html'],
-'isLarge':false
-},
-CR:{
-'schools':['Instituto Tecnológico de Costa Rica',
-'Universidad de Costa Rica'],
-'links':['paginas/Instituto_Tecnologico_de_Costa_Rica.html',
-'paginas/Universidad_de_Costa_Rica.html'],
-'isLarge':false
-},
-EC:{
-'schools':['Universidad de Especialidades y Espíritu Santo'],
-'links':['paginas/Universidad_de_Especialidades_y_Espiritu_Santo.html'],
-'isLarge':false
-},
-ES:{
-'schools':['Universidad Autónoma de Barcelona',
-'Universidad de Alicante',
-'Universidad de Santiago de Compostela',
-'Universidad del País Vasco',
-'Universidad Politécnica de Cataluña'],
-'links':['paginas/Universidad_Autonoma_de_Barcelona.html',
-'paginas/Universidad_de_Alicante.html',
-'paginas/Universidad_de_Santiago_de_Compostela.html',
-'paginas/Universidad_del_Pais_Vasco.html',
-'paginas/Universidad_Politecnica_de_Cataluna.html'],
-'isLarge':false
-},
-US:{
-'schools':['Universidad de Eastern Nuevo México'],
-'links':['paginas/Universidad_de_Eastern_Nuevo_Mexico.html'],
-'isLarge':false
-},
-FI:{
-'schools':['Universidad de Aalto'],
-'links':['paginas/Universidad_de_Aalto.html'],
-'isLarge':false
-},
-FR:{
-'schools':['Escuela Nacional de Aviación Civil (ENAC) Toulouse',
-'Universidad de Rouen',
-'Universidad de Tecnología de Compiègne',
-'Universidad Lumiere Lyon'],
-'links':['paginas/Escuela_Nacional_de_Aviacion_Civil_(ENAC)_Toulouse.html',
-'paginas/Universidad_de_Rouen.html',
-'paginas/Universidad_de_Tecnologia_de_Compiegne.html',
-'paginas/Universidad_Lumiere_Lyon.html'],
-'isLarge':false
-},
-NL:{
-'schools':[],
-'links':[],
-'isLarge':false
-},
-IN:{
-'schools':[],
-'links':[],
-'isLarge':false
-},
-IS:{
-'schools':[],
-'links':[],
-'isLarge':false
-},
-IT:{
-'schools':['Politécnico de Milán'],
-'links':['paginas/Politecnico_de_Milan.html'],
-'isLarge':false
-},
-JP:{
-'schools':['Universidad de Tohoku'],
-'links':['paginas/Universidad_de_Tohoku.html'],
-'isLarge':false
-},
-LV:{
-'schools':['Riga Technical University'],
-'links':['paginas/Riga_Technical_University.html'],
-'isLarge':false
-},
-MY:{
-'schools':[],
-'links':[],
-'isLarge':false
-},
-PA:{
-'schools':[],
-'links':[],
-'isLarge':false
-},
-PY:{
-'schools':[],
-'links':[],
-'isLarge':false
-},
-PE:{
-'schools':['Universidad Andina del Cusco',
-'Universidad Antenor Orrego'],
-'links':['paginas/Universidad_Andina_del_Cusco.html',
-'paginas/Universidad_Antenor_Orrego.html'],
-'isLarge':false
-},
-PL:{
-'schools':['Universidad de Ciencia y Tecnología (AGH)',
-'Universidad de Tecnología de Silesia',
-'Universidad de Wroclaw'],
-'links':['paginas/Universidad_de_Ciencia_y_Tecnologia_(AGH).html',
-'paginas/Universidad_de_Tecnologia_de_Silesia.html',
-'paginas/Universidad_de_Wroclaw.html'],
-'isLarge':false
-},
-PT:{
-'schools':['Universidad de Porto',
-'Universidad Técnica de Lisboa'],
-'links':['paginas/Universidad_de_Porto.html',
-'paginas/Universidad_Tecnica_de_Lisboa.html'],
-'isLarge':false
-},
-CZ:{
-'schools':['Universidad Técnica Checa (Praga)'],
-'links':['paginas/Universidad_Tecnica_Checa_(Praga).html'],
-'isLarge':false
-},
-SG:{
-'schools':[],
-'links':[],
-'isLarge':false
-},
-SE:{
-'schools':['KTH'],
-'links':['paginas/KTH.html'],
-'isLarge':false
-},
-TW:{
-'schools':[],
-'links':[],
-'isLarge':false
-},
-UY:{
-'schools':[],
-'links':[],
-'isLarge':false
-}
-        };
 
-        var countries = {
-          DE:'ALEMANIA',
-AR:'ARGENTINA',
-BE:'BÉLGICA',
-BR:'BRASIL',
-CA:'CANADÁ',
-CL:'CHILE',
-CN:'CHINA',
-CO:'COLOMBIA',
-KR:'COREA DEL SUR',
-CR:'COSTA RICA',
-EC:'ECUADOR',
-ES:'ESPAÑA',
-US:'ESTADOS UNIDOS',
-FI:'FINLANDIA',
-FR:'FRANCIA',
-IT:'ITALIA',
-JP:'JAPÓN',
-LV:'LETONÍA',
-PE:'PERÚ',
-PL:'POLONIA',
-PT:'PORTUGAL',
-CZ:'REPÚBLICA CHECA',
-SE:'SUECIA'
-        };
-
-        var colors = {};
-
-        for(let key in countries){
-          colors[key] = '#5D0227';
-        }
-
-        function adjust_string(s){
+      function adjust_string(s){
           new_s = '';
           counter = 0;
           for(let i = 0; i < s.length; i++){
@@ -466,6 +128,291 @@ SE:'SUECIA'
             }
           }
           return new_s;
+        }
+
+      function mostrar(code){
+          $('.universities-country').html('Universidades en '+adjust_string(countries[code][0]));
+          $('.university-directory-link').attr('href', countries[code][1]);
+          $('.universities-main-container').removeClass('invisible');
+          $('.search-results').html('');
+          let c = more_info[code];
+          let $container = $('.universities');
+          let i = 0;
+
+          $container.html('<div class="university-title">'+
+            '<div class="univerity-title-name"><p>Universidades</p></div>'+
+            '<div class="univerity-title-others">'+
+            '<div class="university-title-ranking"><p>Ranking QS</p></div>'+
+            '</div>'+
+            '</div>');
+           // $container.html('<div class="university-title"><div class="univerity-title-name"><p>Universidades</p></div><div class="univerity-title-others"><div class="university-title-ranking"><p>Ranking QS</p></div><div class="university-title-strenghts"><p>Área de mayor fortaleza</p></div></div></div>');
+           c.schools.forEach(function(school){
+             $container.append(
+               '<div class="university">' +
+                 '<div class="univerity-name">' +
+                   '<p>'+ school +'</p>' +
+                   '<p><a class="school_link" href="'+ ((c.links[i] !== '#') ? (c.links[i]) : '#') +'"><span class="icon-circle-right arrow"></span><span>ver más</span></a></p>' +
+                 '</div>' +
+                 '<div class="university-others">' +
+                   '<div class="univerity-ranking">' +
+                     '<p>' + ((c.rankings[i] != "nope")?c.rankings[i]:'-') + '</p>' +
+                   '</div>' +
+                 //   '<div class="university-strenghts">' +
+                 //     '<p>Algo va aquí</p>' +
+                 //   '</div>' +
+                 '</div>' +
+               '</div>'
+             );
+             i += 1;
+           });
+
+           $('html, body').animate({
+              scrollTop: $('.universities-main-container').offset().top
+            }, 400);
+           console.log(more_info[code]);
+        }
+
+        var more_info = {
+          DE:{
+'schools':['Universidad de Stuttgart'],
+'links':['paginas/Universidad_de_Stuttgart.html'],
+'isLarge':false
+,
+rankings:['260']},
+AR:{
+'schools':['Instituto Tecnológico de Buenos Aires'],
+'links':['paginas/Instituto_Tecnologico_de_Buenos_Aires.html'],
+'isLarge':false
+,
+rankings:['581-590']},
+BE:{
+'schools':['Universidad Católica de Lovaina'],
+'links':['paginas/Universidad_Catolica_de_Lovaina.html'],
+'isLarge':false
+,
+rankings:['81']},
+BR:{
+'schools':['Universidad de Sao Paulo',
+'Universidad Estatal de Campinas',
+'Universidad Estatal Paulista'],
+'links':['paginas/Universidad_de_Sao_Paulo.html',
+'paginas/Universidad_Estatal_de_Campinas.html',
+'paginas/Universidad_Estatal_Paulista.html'],
+'isLarge':false
+,
+rankings:['118',
+'204',
+'491']},
+CA:{
+'schools':["Bishop's University",
+'Universidad de Regina'],
+'links':["paginas/Bishop's_University.html",
+'paginas/Universidad_de_Regina.html'],
+'isLarge':false
+,
+rankings:['nope',
+'nope']},
+CL:{
+'schools':['Instituto Profesional DUOC UC',
+'Universidad San Sebastián',
+'Universidad Santiago de Chile'],
+'links':['paginas/Instituto_Profesional_DUOC_UC.html',
+'paginas/Universidad_San_Sebastian.html',
+'paginas/Universidad_Santiago_de_Chile.html'],
+'isLarge':false
+,
+rankings:['nope',
+'nope',
+'511-520']},
+CN:{
+'schools':['Universidad de Beihang'],
+'links':['paginas/Universidad_de_Beihang.html'],
+'isLarge':false
+,
+rankings:['491']},
+CO:{
+'schools':['Colegio Mayor de Antioquía',
+'Escuela de Ingeniería de Antioquía',
+'Pontificia Universidad Javeriana',
+'Universidad de los Andes',
+'Universidad de Santo Tomás'],
+'links':['paginas/Colegio_Mayor_de_Antioquia.html',
+'paginas/Escuela_de_Ingenieria_de_Antioquia.html',
+'paginas/Pontificia_Universidad_Javeriana.html',
+'paginas/Universidad_de_los_Andes.html',
+'paginas/Universidad_de_Santo_Tomas.html'],
+'isLarge':false
+,
+rankings:['nope',
+'701-750',
+'521-530',
+'272',
+'nope']},
+KR:{
+'schools':['Universidad de Hankuk',
+'Universidad Hanyang'],
+'links':['paginas/Universidad_de_Hankuk.html',
+'paginas/Universidad_Hanyang.html'],
+'isLarge':false
+,
+rankings:['387',
+'151']},
+CR:{
+'schools':['Instituto Tecnológico de Costa Rica',
+'Universidad de Costa Rica'],
+'links':['paginas/Instituto_Tecnologico_de_Costa_Rica.html',
+'paginas/Universidad_de_Costa_Rica.html'],
+'isLarge':false
+,
+rankings:['801-1000',
+'501-510']},
+EC:{
+'schools':['Universidad de Especialidades y Espíritu Santo'],
+'links':['paginas/Universidad_de_Especialidades_y_Espiritu_Santo.html'],
+'isLarge':false
+,
+rankings:['nope']},
+ES:{
+'schools':['Universidad Autónoma de Barcelona',
+'Universidad de Alicante',
+'Universidad de Santiago de Compostela',
+'Universidad del País Vasco',
+'Universidad Politécnica de Cataluña'],
+'links':['paginas/Universidad_Autonoma_de_Barcelona.html',
+'paginas/Universidad_de_Alicante.html',
+'paginas/Universidad_de_Santiago_de_Compostela.html',
+'paginas/Universidad_del_Pais_Vasco.html',
+'paginas/Universidad_Politecnica_de_Cataluna.html'],
+'isLarge':false
+,
+rankings:['193',
+'nope',
+'581-590',
+'601-650',
+'275']},
+US:{
+'schools':['Universidad de Eastern Nuevo México'],
+'links':['paginas/Universidad_de_Eastern_Nuevo_Mexico.html'],
+'isLarge':false
+,
+rankings:['494']},
+FI:{
+'schools':['Universidad de Aalto'],
+'links':['paginas/Universidad_de_Aalto.html'],
+'isLarge':false
+,
+rankings:['140']},
+FR:{
+'schools':['Escuela Nacional de Aviación Civil (ENAC) Toulouse',
+'Universidad de Rouen',
+'Universidad de Tecnología de Compiègne',
+'Universidad Lumiere Lyon'],
+'links':['paginas/Escuela_Nacional_de_Aviacion_Civil_(ENAC)_Toulouse.html',
+'paginas/Universidad_de_Rouen.html',
+'paginas/Universidad_de_Tecnologia_de_Compiegne.html',
+'paginas/Universidad_Lumiere_Lyon.html'],
+'isLarge':false
+,
+rankings:['nope',
+'nope',
+'nope',
+'801-1000']},
+IT:{
+'schools':['Politécnico de Milán'],
+'links':['paginas/Politecnico_de_Milan.html'],
+'isLarge':false
+,
+rankings:['156']},
+JP:{
+'schools':['Universidad de Tohoku'],
+'links':['paginas/Universidad_de_Tohoku.html'],
+'isLarge':false
+,
+rankings:['77']},
+LV:{
+'schools':['Riga Technical University'],
+'links':['paginas/Riga_Technical_University.html'],
+'isLarge':false
+,
+rankings:['751-800']},
+PE:{
+'schools':['Universidad Andina del Cusco',
+'Universidad Antenor Orrego'],
+'links':['paginas/Universidad_Andina_del_Cusco.html',
+'paginas/Universidad_Antenor_Orrego.html'],
+'isLarge':false
+,
+rankings:['nope',
+'nope']},
+PL:{
+'schools':['Universidad de Ciencia y Tecnología (AGH)',
+'Universidad de Tecnología de Silesia',
+'Universidad de Wroclaw'],
+'links':['paginas/Universidad_de_Ciencia_y_Tecnologia_(AGH).html',
+'paginas/Universidad_de_Tecnologia_de_Silesia.html',
+'paginas/Universidad_de_Wroclaw.html'],
+'isLarge':false
+,
+rankings:['801-1000',
+'801-1000',
+'801-1000']},
+PT:{
+'schools':['Universidad de Porto',
+'Universidad Técnica de Lisboa'],
+'links':['paginas/Universidad_de_Porto.html',
+'paginas/Universidad_Tecnica_de_Lisboa.html'],
+'isLarge':false
+,
+rankings:['328',
+'355']},
+CZ:{
+'schools':['Universidad Técnica Checa (Praga)'],
+'links':['paginas/Universidad_Tecnica_Checa_(Praga).html'],
+'isLarge':false
+,
+rankings:['531-540']},
+SE:{
+'schools':['KTH Real Instituto de Tecnología'],
+'links':['paginas/KTH_Real_Instituto_de_Tecnologia.html'],
+'isLarge':false
+,
+rankings:['104']}
+
+        };
+
+        var countries = {
+          DE:['ALEMANIA', 'https://drive.google.com/file/d/1cjPgBCLDqi_oIUdIhLf3_fSVBFR_Jh8x/view?usp=sharing'],
+AR:['ARGENTINA', 'https://drive.google.com/file/d/1qBPCID9xHJBgetDJijmdMJQyJ_vwDwAh/view?usp=sharing'],
+BE:['BÉLGICA', 'https://drive.google.com/file/d/1H_CgjqcyjnuYykJeIXDHEEoc-Z_MS_SW/view?usp=sharing'],
+BR:['BRASIL', ''],
+CA:['CANADÁ', 'https://drive.google.com/file/d/1xdnG6mKCu5mgWaFmfPCZ0AuBJXXkVLbV/view?usp=sharing'],
+CL:['CHILE', 'https://drive.google.com/file/d/1b0CCplBIaVqHRPKlyXlIdrFCmGZa4-Mm/view?usp=sharing'],
+CN:['CHINA', 'https://drive.google.com/file/d/1S-LDmgVcifPlq4nRQivvQtEoU0h0g61G/view?usp=sharing'],
+CO:['COLOMBIA', 'https://drive.google.com/file/d/1AvU5U8Mz5jYWX-k5DGrAkTCBf7V2o3Jo/view?usp=sharing'],
+KR:['COREA DEL SUR', 'https://drive.google.com/file/d/1rY8N8pGt0SsrHKIh-sdskQozjgAXMF6V/view?usp=sharing'],
+CR:['COSTA RICA', 'https://drive.google.com/file/d/1Ed-wao9CcukcuCdRLN05CNtzpfFs4QxW/view?usp=sharing'],
+EC:['ECUADOR', 'https://drive.google.com/file/d/1uYZGjbPKsl8IZNJFqhrddpMqHFZwy5Hw/view?usp=sharing'],
+ES:['ESPAÑA', 'https://drive.google.com/file/d/1H_S-uje3Hn0KbFiGfAiyWE5CG8JM5zq9/view?usp=sharing'],
+US:['ESTADOS UNIDOS', 'https://drive.google.com/file/d/1oghzBu4N83GM1lMPkUc7SUiAT6Nihe_Y/view?usp=sharing'],
+FI:['FINLANDIA', 'https://drive.google.com/file/d/1f3dpFhNpV1CW6Gnj84k6kWfyhHC2Z4Qn/view?usp=sharing'],
+FR:['FRANCIA', 'https://drive.google.com/file/d/1kWM52aUEpByYSXLuWSZLdslzjEtdTkkr/view?usp=sharing'],
+IT:['ITALIA', 'https://drive.google.com/file/d/1m64QxYF1Gc1ffuHg6GeBG1yIv4jVCLwJ/view?usp=sharing'],
+JP:['JAPÓN', 'https://drive.google.com/file/d/1BYhbFXTUmDZEEbGxgvMPAVOdhaDALfjf/view?usp=sharing'],
+LV:['LETONÍA', 'https://drive.google.com/file/d/1fmDFhksNQZPy-IZbZNFHYwyT9XC5Q2X8/view?usp=sharing'],
+PE:['PERÚ', 'https://drive.google.com/file/d/1_ubtIpr9bE2iOqSKYRoef7ktnSvynGiu/view?usp=sharing'],
+PL:['POLONIA', 'https://drive.google.com/file/d/1q6BMx5qHqcQim_XBuuVbK7SYBvjxOPUi/view?usp=sharing'],
+PT:['PORTUGAL', 'https://drive.google.com/file/d/18BNsXOJNpQ_00wyzkLh6aEEUpw9S5gtL/view?usp=sharing'],
+CZ:['REPÚBLICA CHECA', 'https://drive.google.com/file/d/1Y0gl0Ge4qa39HL0GrG1eDIfGVPl_Q2fE/view?usp=sharing'],
+SE:['SUECIA', 'https://drive.google.com/file/d/14g9Xa-HdO48HqdHBkGNj_kC4dDGswff4/view?usp=sharing']
+        };
+
+
+      $(function(){
+
+        var colors = {};
+
+        for(let key in countries){
+          colors[key] = '#5D0227';
         }
 
         mapObj = new jvm.Map({
@@ -491,50 +438,21 @@ SE:'SUECIA'
             }]
           },
           hoverOpacity: 1, // opacity for :hover
-        	hoverColor: 'rgba(78, 244, 233, 1)',
+          hoverColor: 'rgba(78, 244, 233, 1)',
           onRegionOver: function(event, code, region){
             if(!(code in countries))
               event.preventDefault();
           },
           onRegionTipShow: function(event, label, code){
             if(code in countries)
-              label.html(countries[code]);
+              label.html(countries[code][0]);
             else
               event.preventDefault();
          },
          onRegionClick: function(event, code){
            if( !(code in countries) )
              return null;
-
-           $('.universities-country').html('Universidades en '+adjust_string(countries[code]));
-           $('.universities-main-container').removeClass('invisible');
-           let c = more_info[code];
-           let $container = $('.universities');
-           let i = 0;
-           $container.html('<div class="university-title"><div class="univerity-title-name"><p>Universidades</p></div><div class="univerity-title-others"><div class="university-title-ranking"><p>Ranking QS</p></div><div class="university-title-strenghts"><p>Área de mayor fortaleza</p></div></div></div>');
-           c.schools.forEach(function(school){
-             $container.append(
-               '<div class="university">' +
-                 '<div class="univerity-name">' +
-                   '<p>'+ school +'</p>' +
-                   '<p><a class="school_link" href="'+ ((c.links[i] !== '#') ? (c.links[i]) : '#') +'"><span class="icon-circle-right arrow"></span><span>ver más</span></a></p>' +
-                 '</div>' +
-                 '<div class="university-others">' +
-                   '<div class="univerity-ranking">' +
-                     '<p>#4892</p>' +
-                   '</div>' +
-                   '<div class="university-strenghts">' +
-                     '<p>Algo va aquí</p>' +
-                   '</div>' +
-                 '</div>' +
-               '</div>'
-             );
-             i += 1;
-           });
-
-           $('html, body').animate({
-              scrollTop: $('.universities-main-container').offset().top
-            }, 400);
+            mostrar(code);
          }
         });
 
@@ -565,11 +483,25 @@ SE:'SUECIA'
           }
         });
 
+        $('.search-text').on('keyup', function(event){
+          $('.search-results').html('');
+          if($(this).val().length <= 0) return;
+          for(const [key, value] of Object.entries(countries)){
+            if( value[0].indexOf($(this).val().toUpperCase()) !== -1){
+              $('.search-results').append(
+                '<div class="search-result" onclick="mostrar(\''+key.toUpperCase()+'\');">'+
+                  '<p class="search-result-p">'+value[0]+'</p>'+
+                '</div>'
+              );
+              $('.search-results-container').css('top', -$('.search-results-container').height()+'px');
+            }
+          }
+        });
+
         $(window).resize(function(){
           toggle = true;
           $('.header-options').removeClass('icon-menu4');
           $('.header-options').addClass('icon-menu3');
-          console.log($(this).width());
           if($(this).width() >= 500){
             document.querySelector('.header-menu-ul').style.display="flex";
           }

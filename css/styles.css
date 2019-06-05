@@ -149,22 +149,51 @@ body{
   display: flex;
   align-items: center;
   max-width: 850px;
+  position: relative;
+}
+
+.search-results-container{
+  color: gray;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-results{
+  flex-basis: 80%;
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+.search-result{
+  text-align: left;
+  background-color: white;
+}
+
+.search-result-p{
+  margin: 0;
+  padding: 1em;
 }
 
 .search-text-container{
-  flex-basis: 75%;
+  flex-basis: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   font-size: 1.1em;
-  border-left: solid;
-  border-left-width: thin;
-  border-left-color: #207f7d;
+  border-right: solid;
+  border-right-width: thin;
+  border-right-color: #207f7d;
   height: 8vh;
 }
 
 .search-text{
-  flex-basis: 70%;
+  flex-basis: 100%;
   border: none;
   background-color: rgba(0,0,0,0);
   color: white;
@@ -172,7 +201,7 @@ body{
   border-left: solid;
   border-left-width: thin;
   border-left-color: white;
-  margin-left: 3em;
+  margin-left: 1.5em;
 }
 
 .search-text:focus{
@@ -184,6 +213,11 @@ body{
   opacity: 0.7;
 }
 
+.search-result:hover{
+  cursor: pointer;
+  color: white;
+  background-color: #3d3d3d;
+}
 
 .search-button{
   flex-basis: 25%;
@@ -194,6 +228,38 @@ body{
   align-items: center;
   font-style: 1.1em;
   font-weight: bold;
+}
+
+.university-directory-main-container{
+  display: flex;
+  justify-content: center;
+}
+
+.university-directory{
+  max-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+.university-directory:hover{
+  box-shadow: 0 0 10px gray;
+}
+
+.university-directory-link{
+  text-decoration: none;
+  color: #757575;
+}
+
+.university-directory-img{
+  height: 80px;
+  margin-right: 1em;
+}
+
+.university-directory-p{
+  text-align: left;
+  margin: 0;
 }
 
 .universities-main-container{
@@ -235,19 +301,18 @@ body{
 }
 
 .univerity-title-name{
-  flex-basis: 50%;
+  flex-basis: 70%;
   background-color: #757575;
 }
 
 .univerity-title-others{
-  flex-basis: 50%;
+  flex-basis: 30%;
   display: flex;
 }
 
 .university-title-ranking{
-  flex-basis: 40%;
+  flex-basis: 100%;
   background-color: #ffa800;
-  border-right: solid;
   border-left: solid;
 }
 
@@ -265,7 +330,7 @@ body{
 }
 
 .univerity-name{
-  flex-basis: 50%;
+  flex-basis: 70%;
 }
 
 .univerity-name p{
@@ -292,12 +357,12 @@ body{
 }
 
 .university-others{
-  flex-basis: 50%;
+  flex-basis: 30%;
   display: flex;
 }
 
 .univerity-ranking{
-  flex-basis: 40%;
+  flex-basis: 100%;
   padding: 1em 2em;
 }
 
