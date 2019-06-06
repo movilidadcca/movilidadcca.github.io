@@ -51,7 +51,7 @@
       <div class="search-bar-container">
         <div class="search-results-container">
           <div class="search-results">
-
+            
           </div>
         </div>
         <div class="search-text-container">
@@ -138,7 +138,7 @@
           let c = more_info[code];
           let $container = $('.universities');
           let i = 0;
-
+          
           $container.html('<div class="university-title">'+
             '<div class="univerity-title-name"><p>Universidades</p></div>'+
             '<div class="univerity-title-others">'+
@@ -155,7 +155,7 @@
                  '</div>' +
                  '<div class="university-others">' +
                    '<div class="univerity-ranking">' +
-                     '<p>' + ((c.rankings[i] != "nope")?c.rankings[i]:'-') + '</p>' +
+                     '<p>' + ( (c.rankings[i] != 'nope')?c.rankings[i]:'-') + '</p>' +
                    '</div>' +
                  //   '<div class="university-strenghts">' +
                  //     '<p>Algo va aquí</p>' +
@@ -174,236 +174,235 @@
 
         var more_info = {
           DE:{
-'schools':['Universidad de Stuttgart'],
-'links':['paginas/Universidad_de_Stuttgart.html'],
-'isLarge':false
-,
-rankings:['260']},
+'schools':["Universidad de Stuttgart"],
+'links':["paginas/Universidad_de_Stuttgart.html"],
+'isLarge':false,
+rankings:[
+'260']},
 AR:{
-'schools':['Instituto Tecnológico de Buenos Aires'],
-'links':['paginas/Instituto_Tecnologico_de_Buenos_Aires.html'],
-'isLarge':false
-,
-rankings:['581-590']},
+'schools':["Instituto Tecnológico de Buenos Aires"],
+'links':["paginas/Instituto_Tecnologico_de_Buenos_Aires.html"],
+'isLarge':false,
+rankings:[
+'581-590']},
 BE:{
-'schools':['Universidad Católica de Lovaina'],
-'links':['paginas/Universidad_Catolica_de_Lovaina.html'],
-'isLarge':false
-,
-rankings:['81']},
+'schools':["Universidad Católica de Lovaina"],
+'links':["paginas/Universidad_Catolica_de_Lovaina.html"],
+'isLarge':false,
+rankings:[
+'81']},
 BR:{
-'schools':['Universidad de Sao Paulo',
-'Universidad Estatal de Campinas',
-'Universidad Estatal Paulista'],
-'links':['paginas/Universidad_de_Sao_Paulo.html',
-'paginas/Universidad_Estatal_de_Campinas.html',
-'paginas/Universidad_Estatal_Paulista.html'],
-'isLarge':false
-,
-rankings:['118',
+'schools':["Universidad de Sao Paulo",
+"Universidad Estatal de Campinas",
+"Universidad Estatal Paulista"],
+'links':["paginas/Universidad_de_Sao_Paulo.html",
+"paginas/Universidad_Estatal_de_Campinas.html",
+"paginas/Universidad_Estatal_Paulista.html"],
+'isLarge':false,
+rankings:[
+'118',
 '204',
 '491']},
 CA:{
 'schools':["Bishop's University",
-'Universidad de Regina'],
+"Universidad de Regina"],
 'links':["paginas/Bishop's_University.html",
-'paginas/Universidad_de_Regina.html'],
-'isLarge':false
-,
-rankings:['nope',
+"paginas/Universidad_de_Regina.html"],
+'isLarge':false,
+rankings:[
+'nope',
 'nope']},
 CL:{
-'schools':['Instituto Profesional DUOC UC',
-'Universidad San Sebastián',
-'Universidad Santiago de Chile'],
-'links':['paginas/Instituto_Profesional_DUOC_UC.html',
-'paginas/Universidad_San_Sebastian.html',
-'paginas/Universidad_Santiago_de_Chile.html'],
-'isLarge':false
-,
-rankings:['nope',
+'schools':["Instituto Profesional DUOC UC",
+"Universidad San Sebastián",
+"Universidad Santiago de Chile"],
+'links':["paginas/Instituto_Profesional_DUOC_UC.html",
+"paginas/Universidad_San_Sebastian.html",
+"paginas/Universidad_Santiago_de_Chile.html"],
+'isLarge':false,
+rankings:[
+'nope',
 'nope',
 '511-520']},
 CN:{
-'schools':['Universidad de Beihang'],
-'links':['paginas/Universidad_de_Beihang.html'],
-'isLarge':false
-,
-rankings:['491']},
+'schools':["Universidad de Beihang"],
+'links':["paginas/Universidad_de_Beihang.html"],
+'isLarge':false,
+rankings:[
+'491']},
 CO:{
-'schools':['Colegio Mayor de Antioquía',
-'Escuela de Ingeniería de Antioquía',
-'Pontificia Universidad Javeriana',
-'Universidad de los Andes',
-'Universidad de Santo Tomás'],
-'links':['paginas/Colegio_Mayor_de_Antioquia.html',
-'paginas/Escuela_de_Ingenieria_de_Antioquia.html',
-'paginas/Pontificia_Universidad_Javeriana.html',
-'paginas/Universidad_de_los_Andes.html',
-'paginas/Universidad_de_Santo_Tomas.html'],
-'isLarge':false
-,
-rankings:['nope',
+'schools':["Colegio Mayor de Antioquía",
+"Escuela de Ingeniería de Antioquía",
+"Pontificia Universidad Javeriana",
+"Universidad de los Andes",
+"Universidad de Santo Tomás"],
+'links':["paginas/Colegio_Mayor_de_Antioquia.html",
+"paginas/Escuela_de_Ingenieria_de_Antioquia.html",
+"paginas/Pontificia_Universidad_Javeriana.html",
+"paginas/Universidad_de_los_Andes.html",
+"paginas/Universidad_de_Santo_Tomas.html"],
+'isLarge':false,
+rankings:[
+'nope',
 '701-750',
 '521-530',
 '272',
 'nope']},
 KR:{
-'schools':['Universidad de Hankuk',
-'Universidad Hanyang'],
-'links':['paginas/Universidad_de_Hankuk.html',
-'paginas/Universidad_Hanyang.html'],
-'isLarge':false
-,
-rankings:['387',
+'schools':["Universidad de Hankuk",
+"Universidad Hanyang"],
+'links':["paginas/Universidad_de_Hankuk.html",
+"paginas/Universidad_Hanyang.html"],
+'isLarge':false,
+rankings:[
+'387',
 '151']},
 CR:{
-'schools':['Instituto Tecnológico de Costa Rica',
-'Universidad de Costa Rica'],
-'links':['paginas/Instituto_Tecnologico_de_Costa_Rica.html',
-'paginas/Universidad_de_Costa_Rica.html'],
-'isLarge':false
-,
-rankings:['801-1000',
+'schools':["Instituto Tecnológico de Costa Rica",
+"Universidad de Costa Rica"],
+'links':["paginas/Instituto_Tecnologico_de_Costa_Rica.html",
+"paginas/Universidad_de_Costa_Rica.html"],
+'isLarge':false,
+rankings:[
+'801-1000',
 '501-510']},
 EC:{
-'schools':['Universidad de Especialidades y Espíritu Santo'],
-'links':['paginas/Universidad_de_Especialidades_y_Espiritu_Santo.html'],
-'isLarge':false
-,
-rankings:['nope']},
+'schools':["Universidad de Especialidades y Espíritu Santo"],
+'links':["paginas/Universidad_de_Especialidades_y_Espiritu_Santo.html"],
+'isLarge':false,
+rankings:[
+'nope']},
 ES:{
-'schools':['Universidad Autónoma de Barcelona',
-'Universidad de Alicante',
-'Universidad de Santiago de Compostela',
-'Universidad del País Vasco',
-'Universidad Politécnica de Cataluña'],
-'links':['paginas/Universidad_Autonoma_de_Barcelona.html',
-'paginas/Universidad_de_Alicante.html',
-'paginas/Universidad_de_Santiago_de_Compostela.html',
-'paginas/Universidad_del_Pais_Vasco.html',
-'paginas/Universidad_Politecnica_de_Cataluna.html'],
-'isLarge':false
-,
-rankings:['193',
+'schools':["Universidad Autónoma de Barcelona",
+"Universidad de Alicante",
+"Universidad de Santiago de Compostela",
+"Universidad del País Vasco",
+"Universidad Politécnica de Cataluña"],
+'links':["paginas/Universidad_Autonoma_de_Barcelona.html",
+"paginas/Universidad_de_Alicante.html",
+"paginas/Universidad_de_Santiago_de_Compostela.html",
+"paginas/Universidad_del_Pais_Vasco.html",
+"paginas/Universidad_Politecnica_de_Cataluna.html"],
+'isLarge':false,
+rankings:[
+'193',
 'nope',
 '581-590',
 '601-650',
 '275']},
 US:{
-'schools':['Universidad de Eastern Nuevo México'],
-'links':['paginas/Universidad_de_Eastern_Nuevo_Mexico.html'],
-'isLarge':false
-,
-rankings:['494']},
+'schools':["Universidad de Eastern Nuevo México"],
+'links':["paginas/Universidad_de_Eastern_Nuevo_Mexico.html"],
+'isLarge':false,
+rankings:[
+'494']},
 FI:{
-'schools':['Universidad de Aalto'],
-'links':['paginas/Universidad_de_Aalto.html'],
-'isLarge':false
-,
-rankings:['140']},
+'schools':["Universidad de Aalto"],
+'links':["paginas/Universidad_de_Aalto.html"],
+'isLarge':false,
+rankings:[
+'140']},
 FR:{
-'schools':['Escuela Nacional de Aviación Civil (ENAC) Toulouse',
-'Universidad de Rouen',
-'Universidad de Tecnología de Compiègne',
-'Universidad Lumiere Lyon'],
-'links':['paginas/Escuela_Nacional_de_Aviacion_Civil_(ENAC)_Toulouse.html',
-'paginas/Universidad_de_Rouen.html',
-'paginas/Universidad_de_Tecnologia_de_Compiegne.html',
-'paginas/Universidad_Lumiere_Lyon.html'],
-'isLarge':false
-,
-rankings:['nope',
+'schools':["Escuela Nacional de Aviación Civil (ENAC) Toulouse",
+"Universidad de Rouen",
+"Universidad de Tecnología de Compiègne",
+"Universidad Lumiere Lyon"],
+'links':["paginas/Escuela_Nacional_de_Aviacion_Civil_(ENAC)_Toulouse.html",
+"paginas/Universidad_de_Rouen.html",
+"paginas/Universidad_de_Tecnologia_de_Compiegne.html",
+"paginas/Universidad_Lumiere_Lyon.html"],
+'isLarge':false,
+rankings:[
+'nope',
 'nope',
 'nope',
 '801-1000']},
 IT:{
-'schools':['Politécnico de Milán'],
-'links':['paginas/Politecnico_de_Milan.html'],
-'isLarge':false
-,
-rankings:['156']},
+'schools':["Politécnico de Milán"],
+'links':["paginas/Politecnico_de_Milan.html"],
+'isLarge':false,
+rankings:[
+'156']},
 JP:{
-'schools':['Universidad de Tohoku'],
-'links':['paginas/Universidad_de_Tohoku.html'],
-'isLarge':false
-,
-rankings:['77']},
+'schools':["Universidad de Tohoku"],
+'links':["paginas/Universidad_de_Tohoku.html"],
+'isLarge':false,
+rankings:[
+'77']},
 LV:{
-'schools':['Riga Technical University'],
-'links':['paginas/Riga_Technical_University.html'],
-'isLarge':false
-,
-rankings:['751-800']},
+'schools':["Riga Technical University"],
+'links':["paginas/Riga_Technical_University.html"],
+'isLarge':false,
+rankings:[
+'751-800']},
 PE:{
-'schools':['Universidad Andina del Cusco',
-'Universidad Antenor Orrego'],
-'links':['paginas/Universidad_Andina_del_Cusco.html',
-'paginas/Universidad_Antenor_Orrego.html'],
-'isLarge':false
-,
-rankings:['nope',
+'schools':["Universidad Andina del Cusco",
+"Universidad Antenor Orrego"],
+'links':["paginas/Universidad_Andina_del_Cusco.html",
+"paginas/Universidad_Antenor_Orrego.html"],
+'isLarge':false,
+rankings:[
+'nope',
 'nope']},
 PL:{
-'schools':['Universidad de Ciencia y Tecnología (AGH)',
-'Universidad de Tecnología de Silesia',
-'Universidad de Wroclaw'],
-'links':['paginas/Universidad_de_Ciencia_y_Tecnologia_(AGH).html',
-'paginas/Universidad_de_Tecnologia_de_Silesia.html',
-'paginas/Universidad_de_Wroclaw.html'],
-'isLarge':false
-,
-rankings:['801-1000',
+'schools':["Universidad de Ciencia y Tecnología (AGH)",
+"Universidad de Tecnología de Silesia",
+"Universidad de Wroclaw"],
+'links':["paginas/Universidad_de_Ciencia_y_Tecnologia_(AGH).html",
+"paginas/Universidad_de_Tecnologia_de_Silesia.html",
+"paginas/Universidad_de_Wroclaw.html"],
+'isLarge':false,
+rankings:[
+'801-1000',
 '801-1000',
 '801-1000']},
 PT:{
-'schools':['Universidad de Porto',
-'Universidad Técnica de Lisboa'],
-'links':['paginas/Universidad_de_Porto.html',
-'paginas/Universidad_Tecnica_de_Lisboa.html'],
-'isLarge':false
-,
-rankings:['328',
+'schools':["Universidad de Porto",
+"Universidad Técnica de Lisboa"],
+'links':["paginas/Universidad_de_Porto.html",
+"paginas/Universidad_Tecnica_de_Lisboa.html"],
+'isLarge':false,
+rankings:[
+'328',
 '355']},
 CZ:{
-'schools':['Universidad Técnica Checa (Praga)'],
-'links':['paginas/Universidad_Tecnica_Checa_(Praga).html'],
-'isLarge':false
-,
-rankings:['531-540']},
+'schools':["Universidad Técnica Checa (Praga)"],
+'links':["paginas/Universidad_Tecnica_Checa_(Praga).html"],
+'isLarge':false,
+rankings:[
+'531-540']},
 SE:{
-'schools':['KTH Real Instituto de Tecnología'],
-'links':['paginas/KTH_Real_Instituto_de_Tecnologia.html'],
-'isLarge':false
-,
-rankings:['104']}
-
+'schools':["KTH Real Instituto de Tecnología"],
+'links':["paginas/KTH_Real_Instituto_de_Tecnologia.html"],
+'isLarge':false,
+rankings:[
+'104']}
         };
 
         var countries = {
-          DE:['ALEMANIA', 'https://drive.google.com/file/d/1cjPgBCLDqi_oIUdIhLf3_fSVBFR_Jh8x/view?usp=sharing'],
-AR:['ARGENTINA', 'https://drive.google.com/file/d/1qBPCID9xHJBgetDJijmdMJQyJ_vwDwAh/view?usp=sharing'],
-BE:['BÉLGICA', 'https://drive.google.com/file/d/1H_CgjqcyjnuYykJeIXDHEEoc-Z_MS_SW/view?usp=sharing'],
-BR:['BRASIL', ''],
-CA:['CANADÁ', 'https://drive.google.com/file/d/1xdnG6mKCu5mgWaFmfPCZ0AuBJXXkVLbV/view?usp=sharing'],
-CL:['CHILE', 'https://drive.google.com/file/d/1b0CCplBIaVqHRPKlyXlIdrFCmGZa4-Mm/view?usp=sharing'],
-CN:['CHINA', 'https://drive.google.com/file/d/1S-LDmgVcifPlq4nRQivvQtEoU0h0g61G/view?usp=sharing'],
-CO:['COLOMBIA', 'https://drive.google.com/file/d/1AvU5U8Mz5jYWX-k5DGrAkTCBf7V2o3Jo/view?usp=sharing'],
-KR:['COREA DEL SUR', 'https://drive.google.com/file/d/1rY8N8pGt0SsrHKIh-sdskQozjgAXMF6V/view?usp=sharing'],
-CR:['COSTA RICA', 'https://drive.google.com/file/d/1Ed-wao9CcukcuCdRLN05CNtzpfFs4QxW/view?usp=sharing'],
-EC:['ECUADOR', 'https://drive.google.com/file/d/1uYZGjbPKsl8IZNJFqhrddpMqHFZwy5Hw/view?usp=sharing'],
-ES:['ESPAÑA', 'https://drive.google.com/file/d/1H_S-uje3Hn0KbFiGfAiyWE5CG8JM5zq9/view?usp=sharing'],
-US:['ESTADOS UNIDOS', 'https://drive.google.com/file/d/1oghzBu4N83GM1lMPkUc7SUiAT6Nihe_Y/view?usp=sharing'],
-FI:['FINLANDIA', 'https://drive.google.com/file/d/1f3dpFhNpV1CW6Gnj84k6kWfyhHC2Z4Qn/view?usp=sharing'],
-FR:['FRANCIA', 'https://drive.google.com/file/d/1kWM52aUEpByYSXLuWSZLdslzjEtdTkkr/view?usp=sharing'],
-IT:['ITALIA', 'https://drive.google.com/file/d/1m64QxYF1Gc1ffuHg6GeBG1yIv4jVCLwJ/view?usp=sharing'],
-JP:['JAPÓN', 'https://drive.google.com/file/d/1BYhbFXTUmDZEEbGxgvMPAVOdhaDALfjf/view?usp=sharing'],
-LV:['LETONÍA', 'https://drive.google.com/file/d/1fmDFhksNQZPy-IZbZNFHYwyT9XC5Q2X8/view?usp=sharing'],
-PE:['PERÚ', 'https://drive.google.com/file/d/1_ubtIpr9bE2iOqSKYRoef7ktnSvynGiu/view?usp=sharing'],
-PL:['POLONIA', 'https://drive.google.com/file/d/1q6BMx5qHqcQim_XBuuVbK7SYBvjxOPUi/view?usp=sharing'],
-PT:['PORTUGAL', 'https://drive.google.com/file/d/18BNsXOJNpQ_00wyzkLh6aEEUpw9S5gtL/view?usp=sharing'],
-CZ:['REPÚBLICA CHECA', 'https://drive.google.com/file/d/1Y0gl0Ge4qa39HL0GrG1eDIfGVPl_Q2fE/view?usp=sharing'],
-SE:['SUECIA', 'https://drive.google.com/file/d/14g9Xa-HdO48HqdHBkGNj_kC4dDGswff4/view?usp=sharing']
+          DE:["ALEMANIA", "https://drive.google.com/file/d/1cjPgBCLDqi_oIUdIhLf3_fSVBFR_Jh8x/view?usp=sharing"],
+AR:["ARGENTINA", "https://drive.google.com/file/d/1qBPCID9xHJBgetDJijmdMJQyJ_vwDwAh/view?usp=sharing"],
+BE:["BÉLGICA", "https://drive.google.com/file/d/1H_CgjqcyjnuYykJeIXDHEEoc-Z_MS_SW/view?usp=sharing"],
+BR:["BRASIL", ""],
+CA:["CANADÁ", "https://drive.google.com/file/d/1xdnG6mKCu5mgWaFmfPCZ0AuBJXXkVLbV/view?usp=sharing"],
+CL:["CHILE", "https://drive.google.com/file/d/1b0CCplBIaVqHRPKlyXlIdrFCmGZa4-Mm/view?usp=sharing"],
+CN:["CHINA", "https://drive.google.com/file/d/1S-LDmgVcifPlq4nRQivvQtEoU0h0g61G/view?usp=sharing"],
+CO:["COLOMBIA", "https://drive.google.com/file/d/1AvU5U8Mz5jYWX-k5DGrAkTCBf7V2o3Jo/view?usp=sharing"],
+KR:["COREA DEL SUR", "https://drive.google.com/file/d/1rY8N8pGt0SsrHKIh-sdskQozjgAXMF6V/view?usp=sharing"],
+CR:["COSTA RICA", "https://drive.google.com/file/d/1Ed-wao9CcukcuCdRLN05CNtzpfFs4QxW/view?usp=sharing"],
+EC:["ECUADOR", "https://drive.google.com/file/d/1uYZGjbPKsl8IZNJFqhrddpMqHFZwy5Hw/view?usp=sharing"],
+ES:["ESPAÑA", "https://drive.google.com/file/d/1H_S-uje3Hn0KbFiGfAiyWE5CG8JM5zq9/view?usp=sharing"],
+US:["ESTADOS UNIDOS", "https://drive.google.com/file/d/1oghzBu4N83GM1lMPkUc7SUiAT6Nihe_Y/view?usp=sharing"],
+FI:["FINLANDIA", "https://drive.google.com/file/d/1f3dpFhNpV1CW6Gnj84k6kWfyhHC2Z4Qn/view?usp=sharing"],
+FR:["FRANCIA", "https://drive.google.com/file/d/1kWM52aUEpByYSXLuWSZLdslzjEtdTkkr/view?usp=sharing"],
+IT:["ITALIA", "https://drive.google.com/file/d/1m64QxYF1Gc1ffuHg6GeBG1yIv4jVCLwJ/view?usp=sharing"],
+JP:["JAPÓN", "https://drive.google.com/file/d/1BYhbFXTUmDZEEbGxgvMPAVOdhaDALfjf/view?usp=sharing"],
+LV:["LETONÍA", "https://drive.google.com/file/d/1fmDFhksNQZPy-IZbZNFHYwyT9XC5Q2X8/view?usp=sharing"],
+PE:["PERÚ", "https://drive.google.com/file/d/1_ubtIpr9bE2iOqSKYRoef7ktnSvynGiu/view?usp=sharing"],
+PL:["POLONIA", "https://drive.google.com/file/d/1q6BMx5qHqcQim_XBuuVbK7SYBvjxOPUi/view?usp=sharing"],
+PT:["PORTUGAL", "https://drive.google.com/file/d/18BNsXOJNpQ_00wyzkLh6aEEUpw9S5gtL/view?usp=sharing"],
+CZ:["REPÚBLICA CHECA", "https://drive.google.com/file/d/1Y0gl0Ge4qa39HL0GrG1eDIfGVPl_Q2fE/view?usp=sharing"],
+SE:["SUECIA", "https://drive.google.com/file/d/14g9Xa-HdO48HqdHBkGNj_kC4dDGswff4/view?usp=sharing"]
         };
 
 
@@ -413,7 +412,7 @@ SE:['SUECIA', 'https://drive.google.com/file/d/14g9Xa-HdO48HqdHBkGNj_kC4dDGswff4
 
         for(let key in countries){
           colors[key] = '#5D0227';
-        }
+        }        
 
         mapObj = new jvm.Map({
           container: $('#world-map'),
