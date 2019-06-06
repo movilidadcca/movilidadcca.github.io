@@ -132,7 +132,12 @@
 
       function mostrar(code){
           $('.universities-country').html('Universidades en '+adjust_string(countries[code][0]));
-          $('.university-directory-link').attr('href', countries[code][1]);
+          if(countries[code][1].length > 0){
+            $('.university-directory-link').attr('href', countries[code][1]);
+            $('.university-directory-link').attr('style', 'display:block');
+          }
+          else
+            $('.university-directory-link').attr('style', 'display:none');
           $('.universities-main-container').removeClass('invisible');
           $('.search-results').html('');
           let c = more_info[code];

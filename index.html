@@ -132,7 +132,12 @@
 
       function mostrar(code){
           $('.universities-country').html('Universidades en '+adjust_string(countries[code][0]));
-          $('.university-directory-link').attr('href', countries[code][1]);
+          if(countries[code][1].length > 0){
+            $('.university-directory-link').attr('href', countries[code][1]);
+            $('.university-directory-link').attr('style', 'display:block');
+          }
+          else
+            $('.university-directory-link').attr('style', 'display:none');
           $('.universities-main-container').removeClass('invisible');
           $('.search-results').html('');
           let c = more_info[code];
@@ -180,11 +185,14 @@
 rankings:[
 '260']},
 AR:{
-'schools':["Instituto Tecnológico de Buenos Aires"],
-'links':["paginas/Instituto_Tecnologico_de_Buenos_Aires.html"],
+'schools':["Instituto Tecnológico de Buenos Aires",
+"Universidad Nacional del Nordeste"],
+'links':["paginas/Instituto_Tecnologico_de_Buenos_Aires.html",
+"paginas/Universidad_Nacional_del_Nordeste.html"],
 'isLarge':false,
 rankings:[
-'581-590']},
+'581-590',
+'nope']},
 BE:{
 'schools':["Universidad Católica de Lovaina"],
 'links':["paginas/Universidad_Catolica_de_Lovaina.html"],
@@ -204,9 +212,9 @@ rankings:[
 '204',
 '491']},
 CA:{
-'schools':["Bishop's University",
+'schools':["Bishops University",
 "Universidad de Regina"],
-'links':["paginas/Bishop's_University.html",
+'links':["paginas/Bishops_University.html",
 "paginas/Universidad_de_Regina.html"],
 'isLarge':false,
 rankings:[
@@ -277,19 +285,22 @@ ES:{
 "Universidad de Alicante",
 "Universidad de Santiago de Compostela",
 "Universidad del País Vasco",
-"Universidad Politécnica de Cataluña"],
+"Universidad Politécnica de Cataluña",
+"Universidad Politécnica de Valencia"],
 'links':["paginas/Universidad_Autonoma_de_Barcelona.html",
 "paginas/Universidad_de_Alicante.html",
 "paginas/Universidad_de_Santiago_de_Compostela.html",
 "paginas/Universidad_del_Pais_Vasco.html",
-"paginas/Universidad_Politecnica_de_Cataluna.html"],
+"paginas/Universidad_Politecnica_de_Cataluna.html",
+"paginas/Universidad_Politecnica_de_Valencia.html"],
 'isLarge':false,
 rankings:[
 '193',
 'nope',
 '581-590',
 '601-650',
-'275']},
+'275',
+'310']},
 US:{
 'schools':["Universidad de Eastern Nuevo México"],
 'links':["paginas/Universidad_de_Eastern_Nuevo_Mexico.html"],
@@ -376,7 +387,13 @@ SE:{
 'links':["paginas/KTH_Real_Instituto_de_Tecnologia.html"],
 'isLarge':false,
 rankings:[
-'104']}
+'104']},
+TW:{
+'schools':["National Taiwan University of Sciencie and Technology"],
+'links':["paginas/National_Taiwan_University_of_Sciencie_and_Technology.html"],
+'isLarge':false,
+rankings:[
+'nope']}
         };
 
         var countries = {
@@ -385,7 +402,7 @@ AR:["ARGENTINA", "https://drive.google.com/file/d/1qBPCID9xHJBgetDJijmdMJQyJ_vwD
 BE:["BÉLGICA", "https://drive.google.com/file/d/1H_CgjqcyjnuYykJeIXDHEEoc-Z_MS_SW/view?usp=sharing"],
 BR:["BRASIL", ""],
 CA:["CANADÁ", "https://drive.google.com/file/d/1xdnG6mKCu5mgWaFmfPCZ0AuBJXXkVLbV/view?usp=sharing"],
-CL:["CHILE", "https://drive.google.com/file/d/1b0CCplBIaVqHRPKlyXlIdrFCmGZa4-Mm/view?usp=sharing"],
+CL:["CHILE", "https://drive.google.com/file/d/1SENDGe8LU_aLPQphAtGzHvE6_f15B3Cx/view?usp=sharing"],
 CN:["CHINA", "https://drive.google.com/file/d/1S-LDmgVcifPlq4nRQivvQtEoU0h0g61G/view?usp=sharing"],
 CO:["COLOMBIA", "https://drive.google.com/file/d/1AvU5U8Mz5jYWX-k5DGrAkTCBf7V2o3Jo/view?usp=sharing"],
 KR:["COREA DEL SUR", "https://drive.google.com/file/d/1rY8N8pGt0SsrHKIh-sdskQozjgAXMF6V/view?usp=sharing"],
@@ -402,7 +419,8 @@ PE:["PERÚ", "https://drive.google.com/file/d/1_ubtIpr9bE2iOqSKYRoef7ktnSvynGiu
 PL:["POLONIA", "https://drive.google.com/file/d/1q6BMx5qHqcQim_XBuuVbK7SYBvjxOPUi/view?usp=sharing"],
 PT:["PORTUGAL", "https://drive.google.com/file/d/18BNsXOJNpQ_00wyzkLh6aEEUpw9S5gtL/view?usp=sharing"],
 CZ:["REPÚBLICA CHECA", "https://drive.google.com/file/d/1Y0gl0Ge4qa39HL0GrG1eDIfGVPl_Q2fE/view?usp=sharing"],
-SE:["SUECIA", "https://drive.google.com/file/d/14g9Xa-HdO48HqdHBkGNj_kC4dDGswff4/view?usp=sharing"]
+SE:["SUECIA", "https://drive.google.com/file/d/14g9Xa-HdO48HqdHBkGNj_kC4dDGswff4/view?usp=sharing"],
+TW:["TAIWÁN", ""]
         };
 
 
