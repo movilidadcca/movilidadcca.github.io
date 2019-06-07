@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/jvectormap.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles2.css">
   </head>
   <body>
     <header class="header-main">
@@ -16,23 +16,7 @@
           <img src="imagenes/logo_ipn.png" alt="">
         </div>
         <div class="header-menu">
-          <span class="icon-menu3 header-options"></span>
-          <ul class="header-menu-ul">
-            <li id="se">
-              <img src="imagenes/seguimiento.png">
-              <p>Guía de Seguimiento <span id="s"></span> </p>
-            </li>
-
-            <li id="pa">
-              <img src="imagenes/pagos.png">
-              <p>Formalización de Pagos <span id="s1"></span></p>
-            </li>
-
-            <li id="ex">
-              <img src="imagenes/exito.png" alt="">
-              <p>Casos de Éxito <span id="s2"></span></p>
-            </li>
-          </ul>
+          <div class="header-menu-mov">Movilidad Académica Internacional</div>
         </div>
       </nav>
     </header>
@@ -40,11 +24,36 @@
       <div class="world-container">
         <div class="world-text">
           <div class="world-text-container">
-            <p class="world-text-mov">Movilidad Académica</p>
-            <p class="world-text-search">Selecciona o busca algún país</p>
+            <p class="world-text-search">Elige tu país de destino</p>
           </div>
         </div>
-        <div id="world-map"></div>
+        <div class="map-container">
+          <div class="map-buttons-container">
+            <a class="map-button">
+              <img src="imagenes/GUIA_DE_SEGUIMIENTO.png">
+            </a>
+            <a class="map-button">
+              <img src="imagenes/FORMALIZACION_DE_PAGO.png">
+            </a>
+            <a class="map-button">
+              <img src="imagenes/CASOS_DE_EXITO.png">
+            </a>
+          </div>
+
+          <div class="map">
+            <div id="world-map"></div>
+          </div>
+
+          <div class="map-buttons-container2">
+            <a class="map-button">
+              <img src="imagenes/RECOMENDACIONES_PREVIAS.png">
+            </a>
+            <a class="map-button">
+              <img src="imagenes/RECOMENDACIONES_ACADEMICAS.png">
+            </a>
+          </div>
+        </div>
+        
       </div>
     </section>
     <div class="search-bar">
@@ -56,7 +65,7 @@
         </div>
         <div class="search-text-container">
           <span class="icon-search"></span>
-          <input type="search" placeholder="Busca países" class="search-text" name="" value="">
+          <input type="search" placeholder="Elige tu país de destino" class="search-text" name="" value="">
         </div>
       </div>
     </div>
@@ -212,7 +221,7 @@ rankings:[
 '204',
 '491']},
 CA:{
-'schools':["Bishops University",
+'schools':["Bishop's University",
 "Universidad de Regina"],
 'links':["paginas/Bishops_University.html",
 "paginas/Universidad_de_Regina.html"],
@@ -515,18 +524,6 @@ TW:["TAIWÁN", ""]
               );
               $('.search-results-container').css('top', -$('.search-results-container').height()+'px');
             }
-          }
-        });
-
-        $(window).resize(function(){
-          toggle = true;
-          $('.header-options').removeClass('icon-menu4');
-          $('.header-options').addClass('icon-menu3');
-          if($(this).width() >= 500){
-            document.querySelector('.header-menu-ul').style.display="flex";
-          }
-          else{
-            document.querySelector('.header-menu-ul').style.display="none";
           }
         });
 
