@@ -110,17 +110,7 @@ function create_banner(){ // decide wheter create a layout for the photos or jus
     mainContainer.style.opacity = "1";
     load.style.display = "none";
   });
-
-  // if(photos.length > 4){
-  //   resize();
-  //   mainContainer.style.display = "flex";
-  //   mainContainer.style.maxHeight = "none";
-  //   mainContainer.style.opacity = "1";
-  //   load.style.display = "none";
-  // }
-  // else{
-  //   console.log("I don't do that yet!");
-  // }
+  
 }
 
 function load_image(url) {
@@ -128,7 +118,7 @@ function load_image(url) {
       let img = new Image();
       img.addEventListener('load', e => resolve(img));
       img.addEventListener('error', () => {
-        reject(new Error(`Failed to load image's URL: ${url}`));
+        reject(new Error("Failed to load image's URL: ${url}"));
       });
       img.src = url;
     });

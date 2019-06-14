@@ -7,24 +7,49 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/jvectormap.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/styles2.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
+    <div class="black-screen"></div>
+    <aside class="menu-aside">
+      <ul>
+        <a href="#"><li class="border-li">Guía de Seguimiento</li></a>
+        <a href="#"><li>Formalización de Pagos</li></a>
+        <a href="#"><li>Recomendaciones Previas</li></a>
+        <a href="#"><li>Recomendaciones Académicas</li></a>
+        <a href="#"><li>Casos de Éxito</li></a>
+        <a href="#"><li>Formatos</li></a>
+      </ul>
+    </aside>
     <header class="header-main">
+      <div class="header-colors">
+        <div class="header-colors-1"></div>
+        <div class="header-colors-2"></div>
+        <div class="header-colors-3"></div>
+        <div class="header-colors-4"></div>
+        <div class="header-colors-5"></div>
+      </div>
       <nav class="header-main-nav">
         <div class="header-logo">
           <img src="imagenes/logo_ipn.png" alt="">
         </div>
         <div class="header-menu">
-          <div class="header-menu-mov">Movilidad Académica Internacional</div>
+          <div class="header-menu-title">
+            <div class="header-menu-mov">Movilidad Académica Internacional</div>
+            <div class="header-menu-elige">Elige tu país de destino</div>
+          </div>
+        </div>
+        <div class="header-menu-options">
+          <span class="icon-menu mop"></span>
         </div>
       </nav>
     </header>
     <section class="map-section">
       <div class="world-container">
-        <div class="world-text">
-          <div class="world-text-container">
-            <p class="world-text-search">Elige tu país de destino</p>
+        <div class="world-container-mov-title">
+          <div class="header-menu-title">
+            <div class="header-menu-mov">Movilidad Académica Internacional</div>
+            <div class="header-menu-elige">Elige tu país de destino</div>
           </div>
         </div>
         <div class="map-container">
@@ -65,11 +90,11 @@
         </div>
         <div class="search-text-container">
           <span class="icon-search"></span>
-          <input type="search" placeholder="Elige tu país de destino" class="search-text" name="" value="">
+          <input type="search" placeholder="Busca tu país de destino" class="search-text" name="" value="">
         </div>
       </div>
     </div>
-
+    
     <section class="universities-main-container invisible">
       <div class="universities-country-container">
         <p class="universities-country">
@@ -80,7 +105,7 @@
         <a class="university-directory-link" target="_blank">
           <div class="university-directory">
             <img src="imagenes/AGENDA.png" class="university-directory-img">
-            <p class="university-directory-p">Mira donde se han hospedado otros alumnos en el directorio del país.</p>
+            <p class="university-directory-p">Mira donde se han hospedado otros alumnos</p>
           </div>
         </a>
       </div>
@@ -92,22 +117,6 @@
           <div class="university-title-ranking"><p>Ranking QS</p></div>
         </div>
       </div>
-
-        <!--<div class="university">
-          <div class="univerity-name">
-            <p>Universidad de Barcelona</p>
-            <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
-          </div>
-          <div class="university-others">
-            <div class="univerity-ranking">
-              <p>#4892</p>
-            </div>
-            <div class="university-strenghts">
-              <p>Algo va aquí</p>
-            </div>
-          </div>
-        </div>-->
-
       </div>
 
     </section>
@@ -159,7 +168,7 @@
             '<div class="university-title-ranking"><p>Ranking QS</p></div>'+
             '</div>'+
             '</div>');
-           // $container.html('<div class="university-title"><div class="univerity-title-name"><p>Universidades</p></div><div class="univerity-title-others"><div class="university-title-ranking"><p>Ranking QS</p></div><div class="university-title-strenghts"><p>Área de mayor fortaleza</p></div></div></div>');
+
            c.schools.forEach(function(school){
              $container.append(
                '<div class="university">' +
@@ -171,9 +180,6 @@
                    '<div class="univerity-ranking">' +
                      '<p>' + ( (c.rankings[i] != 'nope')?c.rankings[i]:'-') + '</p>' +
                    '</div>' +
-                 //   '<div class="university-strenghts">' +
-                 //     '<p>Algo va aquí</p>' +
-                 //   '</div>' +
                  '</div>' +
                '</div>'
              );
@@ -454,13 +460,6 @@ TW:["TAIWÁN", ""]
               fill: '#00b2c0'
             }
           },
-          // markers: plants.map(function(h){ return {name: h.name, latLng: h.coords} }),
-          // series: {
-          //     regions: [{
-          //     values: colors
-          //   }],
-          // },
-          // colors: colors,
           series: {
             regions: [{
               attribute: 'fill'
@@ -525,6 +524,27 @@ TW:["TAIWÁN", ""]
               $('.search-results-container').css('top', -$('.search-results-container').height()+'px');
             }
           }
+        });
+
+        $('.mop').click(function(event){
+          if($('.menu-aside').offset().top == -500){
+            $('.menu-aside').css('top', '17vh');
+            $('.black-screen').css('display', 'block');
+          }
+          else{
+            $('.menu-aside').css('top', '-500px');
+            $('.black-screen').css('display', 'none');
+          }
+        });
+
+        $('.black-screen').click(function(event){
+          $('.menu-aside').css('top', '-500px');
+          $(this).css('display', 'none');
+        });
+
+        $(window).resize(function(event){
+          $('.menu-aside').css('top', '-500px');
+          $('.black-screen').css('display', 'none');
         });
 
       });
