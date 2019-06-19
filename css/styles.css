@@ -85,7 +85,7 @@ body{
 
 .header-colors div{
   height: 1vh;
-  flex-basis: 20%;
+  flex-basis: 16.666%;
 }
 
 .header-colors-1{ background-color: #00bdff; }
@@ -93,6 +93,7 @@ body{
 .header-colors-3{ background-color: #8bc441; }
 .header-colors-4{ background-color: #fd5903; }
 .header-colors-5{ background-color: #0098a7; }
+.header-colors-6{ background-color: #8a8a8a; }
 
 .header-main-fixed{
   position: fixed;
@@ -248,16 +249,53 @@ body{
 
 .map-button{
   margin-bottom: 1em;
+  background-color: blue;
+  width: 140px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  padding: 0.3em;
+  text-decoration: none;
 }
 
 .map-button img{
-  height: 100px;
-  width: 140px;
+  height: 40px;
+  width: 40px;
 }
 
-.map-button img:hover{
+.map-button:hover{
   cursor: pointer;
   opacity: 0.85;
+}
+
+.map-button p{
+  flex-basis: 100%;
+  margin: 0;
+  text-align: center;
+  margin-top: 0.5em;
+  color: white;
+}
+
+#guia_de_seguimiento{
+  background-color: #00bdff;
+}
+#formalizacion_de_pagos{
+  background-color: #d6105c;
+}
+#casos_de_exito{
+  background-color: #8bc441;
+}
+#recomedaciones_previas{
+  background-color: #fd5903;
+}
+#recomendaciones_academicas{
+  background-color: #0098a7;
+}
+#formatos{
+  background-color: #8a8a8a;
 }
 
 
@@ -690,6 +728,40 @@ footer{
   display: none;
 }
 
+.formats-main-container{
+  min-height: 100vh;
+}
+
+.formats-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formats{
+  flex-basis: 50%;
+  margin: 2em 0;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.format{
+  padding: 1.5em 0;
+  flex-basis: 100%;
+  border-bottom: solid;
+  border-bottom-width: thin;
+  border-bottom-color: #6e6060;
+  color: #00b2c0;
+  text-decoration: none;
+}
+
+.format:hover{
+  background-color: #3d3d3d;
+  color: white;
+  cursor: pointer;
+}
+
 @media (max-width: 950px){
   .map-buttons-container,
   .map-buttons-container2{
@@ -801,6 +873,10 @@ footer{
 
   #world-map{
     height: 50vh;
+  }
+
+  .formats{
+    flex-basis: 100%;
   }
 }
 

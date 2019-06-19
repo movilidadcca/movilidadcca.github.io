@@ -76,6 +76,7 @@ function show_photos(){
     node.style.margin = "0 0 " + _MARGIN_ROW + "px 0";
     node.style.backgroundImage = "url('"+ photos[super_duper[i]].src +"')"
     node.classList.add('bw');
+    node.style.maxWidth = _W + "px";
     photos[super_duper[i]].cancel = true;
     mainContainer.appendChild(node);
   }
@@ -102,15 +103,17 @@ function create_banner(){ // decide wheter create a layout for the photos or jus
   _W = mainContainer.offsetWidth;
   mainContainer.style.display = "none";
   let p = load_photos();
-  p.then( (res) => {
+  p.then((res) => {
     console.log(photos);
     resize();
     mainContainer.style.display = "flex";
     mainContainer.style.maxHeight = "none";
     mainContainer.style.opacity = "1";
     load.style.display = "none";
+  })
+  .catch((reason) => {
+    document.querySelector('.photos-main-container').style.display = "none";
   });
-  
 }
 
 function load_image(url) {
@@ -135,6 +138,9 @@ function load_photos(){ // load the photos from the hidden links
     for(let k = 0; k < container.length; k++){
       p[k] = load_image(container[k].value);
     }
+    if(p.length === 0){
+      reject;
+    }
     if(p.length > 3){
       _LEVELS = 2;
       counter = p.length;
@@ -146,7 +152,7 @@ function load_photos(){ // load the photos from the hidden links
     new_height = ( _H - ( (_LEVELS+1) * _MARGIN_ROW) ) / _LEVELS;
     aspect_ratio = _W / _H;
     for(let k = 0; k < counter; k++){
-      p[k].then( (img) => {
+      p[k].then((img) => {
         photos[k] = img;
         tam += 1;
         photos[k].cancel = false;

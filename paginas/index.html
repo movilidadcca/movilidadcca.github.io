@@ -13,12 +13,12 @@
     <div class="black-screen"></div>
     <aside class="menu-aside">
       <ul>
-        <a href="#"><li class="border-li">Guía de Seguimiento</li></a>
-        <a href="#"><li>Formalización de Pagos</li></a>
-        <a href="#"><li>Recomendaciones Previas</li></a>
-        <a href="#"><li>Recomendaciones Académicas</li></a>
-        <a href="#"><li>Casos de Éxito</li></a>
-        <a href="#"><li>Formatos</li></a>
+        <a target="_blank" href="https://drive.google.com/file/d/1dvvM5pmUA08wbfWWRwvRnfXDm-eRa4Dc/view?usp=sharing"><li class="border-li">Guía de Seguimiento</li></a>
+        <a target="_blank" href="https://drive.google.com/file/d/1DsnygGTBnI28ZufA494PnHdvFdREOPUU/view?usp=sharing"><li>Formalización de Pagos</li></a>
+        <a target="_blank" href="https://drive.google.com/file/d/1-1cCR2nXL41zBwreA_S1bi7v85D7MB_I/view?usp=sharing"><li>Recomendaciones Previas</li></a>
+        <a target="_blank" href="https://drive.google.com/file/d/1J8kAFfI_ogKGsQrXqibQRm6dIYG8IzlQ/view?usp=sharing"><li>Recomendaciones Académicas</li></a>
+        <a target="_blank" href="https://youtu.be/qmcOmxgtRmQ"><li>Casos de Éxito</li></a>
+        <a class="formats-button"><li>Formatos</li></a>
       </ul>
     </aside>
     <header class="header-main">
@@ -28,6 +28,7 @@
         <div class="header-colors-3"></div>
         <div class="header-colors-4"></div>
         <div class="header-colors-5"></div>
+        <div class="header-colors-6"></div>
       </div>
       <nav class="header-main-nav">
         <div class="header-logo">
@@ -54,14 +55,17 @@
         </div>
         <div class="map-container">
           <div class="map-buttons-container">
-            <a class="map-button">
+            <a href="https://drive.google.com/file/d/1dvvM5pmUA08wbfWWRwvRnfXDm-eRa4Dc/view?usp=sharing" class="map-button" id="guia_de_seguimiento" target="_blank">
               <img src="imagenes/GUIA_DE_SEGUIMIENTO.png">
+              <p>Guía de Seguimiento</p>
             </a>
-            <a class="map-button">
+            <a href="https://drive.google.com/file/d/1DsnygGTBnI28ZufA494PnHdvFdREOPUU/view?usp=sharing" class="map-button" id="formalizacion_de_pagos" target="_blank">
               <img src="imagenes/FORMALIZACION_DE_PAGO.png">
+              <p>Formalización de Pagos</p>
             </a>
-            <a class="map-button">
+            <a href="https://youtu.be/qmcOmxgtRmQ" class="map-button" id="casos_de_exito" target="_blank">
               <img src="imagenes/CASOS_DE_EXITO.png">
+              <p>Casos de Éxito</p>
             </a>
           </div>
 
@@ -70,11 +74,17 @@
           </div>
 
           <div class="map-buttons-container2">
-            <a class="map-button">
+            <a href="https://drive.google.com/file/d/1-1cCR2nXL41zBwreA_S1bi7v85D7MB_I/view?usp=sharing" class="map-button" id="recomedaciones_previas" target="_blank">
               <img src="imagenes/RECOMENDACIONES_PREVIAS.png">
+              <p>Recomendaciones Previas</p>
             </a>
-            <a class="map-button">
+            <a href="https://drive.google.com/file/d/1J8kAFfI_ogKGsQrXqibQRm6dIYG8IzlQ/view?usp=sharing" class="map-button" id="recomendaciones_academicas" target="_blank">
               <img src="imagenes/RECOMENDACIONES_ACADEMICAS.png">
+              <p>Recomendaciones Académicas</p>
+            </a>
+            <a class="map-button formats-button" id="formatos">
+              <img src="imagenes/FORMATO.png">
+              <p>Formatos descargables</p>
             </a>
           </div>
         </div>
@@ -94,7 +104,21 @@
         </div>
       </div>
     </div>
-    
+
+    <section class="formats-main-container invisible">
+      <div class="formats-title-container">
+        <p class="formats-title">
+          Formatos
+        </p>
+      </div>
+      <div class="formats-container">
+        <div class="formats">
+          {{ FORMATS }}
+        </div>
+      </div>
+      
+    </section>
+
     <section class="universities-main-container invisible">
       <div class="universities-country-container">
         <p class="universities-country">
@@ -117,6 +141,22 @@
           <div class="university-title-ranking"><p>Ranking QS</p></div>
         </div>
       </div>
+
+        <!--<div class="university">
+          <div class="univerity-name">
+            <p>Universidad de Barcelona</p>
+            <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
+          </div>
+          <div class="university-others">
+            <div class="univerity-ranking">
+              <p>#4892</p>
+            </div>
+            <div class="university-strenghts">
+              <p>Algo va aquí</p>
+            </div>
+          </div>
+        </div>-->
+
       </div>
 
     </section>
@@ -149,6 +189,7 @@
         }
 
       function mostrar(code){
+          $('.formats-main-container').addClass('invisible');
           $('.universities-country').html('Universidades en '+adjust_string(countries[code][0]));
           if(countries[code][1].length > 0){
             $('.university-directory-link').attr('href', countries[code][1]);
@@ -168,7 +209,7 @@
             '<div class="university-title-ranking"><p>Ranking QS</p></div>'+
             '</div>'+
             '</div>');
-
+           // $container.html('<div class="university-title"><div class="univerity-title-name"><p>Universidades</p></div><div class="univerity-title-others"><div class="university-title-ranking"><p>Ranking QS</p></div><div class="university-title-strenghts"><p>Área de mayor fortaleza</p></div></div></div>');
            c.schools.forEach(function(school){
              $container.append(
                '<div class="university">' +
@@ -180,6 +221,9 @@
                    '<div class="univerity-ranking">' +
                      '<p>' + ( (c.rankings[i] != 'nope')?c.rankings[i]:'-') + '</p>' +
                    '</div>' +
+                 //   '<div class="university-strenghts">' +
+                 //     '<p>Algo va aquí</p>' +
+                 //   '</div>' +
                  '</div>' +
                '</div>'
              );
@@ -189,7 +233,6 @@
            $('html, body').animate({
               scrollTop: $('.universities-main-container').offset().top
             }, 400);
-           console.log(more_info[code]);
         }
 
         var more_info = {
@@ -219,6 +262,13 @@
               fill: '#00b2c0'
             }
           },
+          // markers: plants.map(function(h){ return {name: h.name, latLng: h.coords} }),
+          // series: {
+          //     regions: [{
+          //     values: colors
+          //   }],
+          // },
+          // colors: colors,
           series: {
             regions: [{
               attribute: 'fill'
@@ -299,6 +349,14 @@
         $('.black-screen').click(function(event){
           $('.menu-aside').css('top', '-500px');
           $(this).css('display', 'none');
+        });
+
+        $('.formats-button').click(function(event){
+          $('.universities-main-container').addClass('invisible');
+          $('.formats-main-container').removeClass('invisible');
+          $('html, body').animate({
+              scrollTop: $('.formats-main-container').offset().top
+            }, 400);
         });
 
         $(window).resize(function(event){

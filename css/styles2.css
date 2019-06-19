@@ -605,6 +605,12 @@ footer{
   background-position: center;
 }
 
+.formats-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 500px){
   .header-logo img{
     height: 60px;
