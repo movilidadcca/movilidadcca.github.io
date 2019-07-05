@@ -25,7 +25,7 @@
 <img class=header-main-image src=../imagenes/icono_universidad.png>
 </div>
 <div class=header-main-p>
-<p class=header-main-univerity>Universidad del Atlántico</p>
+<p class=header-main-univerity>Karlsruhe Institute of Technology</p>
 </div>
 </div>
 <div class=header-main-margin>
@@ -40,7 +40,7 @@
 <div class=photos-loading>
 <img src=../imagenes/loading.svg>
 </div>
-<input type="hidden" value="https://lh3.googleusercontent.com/cG8cNZw52BEVqZlBNEXzvNV59DwjrKVlBYDbYvAMu1grWgdlUVDvZg_Mef0-_M4ODtif4HD16HrYx6L808KWM_snaj7QO6NuFnmvcRgf-sAKU0mdqCXjZLUFzafQPThR4Ri8qLuOXQ=w2400"><input type="hidden" value="https://lh3.googleusercontent.com/4AgtV_tlYu43Oyai9lwQu01pJIyKSAH4j9TfCVfqxE_dD7d1xVHsdisyJWcz4kvzzNRSvfgP_vTqgHHfeBBmVDhSTYG_6JP1URxdQaOB0nlFL2a5n99ZrqWtfZunzLeXAKNvgl5sVw=w2400"><input type="hidden" value="https://lh3.googleusercontent.com/csxJGsdx94cM7mAziFsoFhBzKI4WQRkkQB0Tq66ozo-WlSWXVHvdnDX-awurdVRES8BYcAJpTBHFd-qxq6D9qxSamho2LjaE0OCnab_5ZcO21qlWTj2tARKVhrFbihBoeFqtDA3UPQ=w2400"><input type="hidden" value="https://lh3.googleusercontent.com/3yJq_XKdY-djWDCY8EvGa1XnUY1oRmNLC5Xq6in3LAM8gZhwzymecCybQz5BozG1stiXA1epbPaxqw2YlZ7V1zuWYH3d_SF-YU-mW9hMgEWC1yrA1NN2DR01L5BtKeJaMkV5yHGqPQ=w2400">
+<input type="hidden" value="https://lh3.googleusercontent.com/Vq5hchJ97O_tR0ITPKqKP4ttakMFTf9pLiDezFoz9lx53rEFW1qUmwvfjARPKuv8qhwm0ZgDMFjS9ALZ72YiyxlNIb1tsTxDJkECvEiN4PsUGMuNicLDgHj8tBYvJYJRi3Og2-_iIQ=w2400">
 <div class=photos></div>
 </section>
 <section class=interesting-links-main-container>
@@ -50,7 +50,7 @@ Enlaces de interés
 </p>
 </div>
 <div class=interesting-links-container>
-<a style="display:none;" href="{{ LINK_ALI }}" class=interesting-link target=_blank>
+<a {{ KILLER_ALI }} href="https://drive.google.com/file/d/1ovf_9ZD1COlKZufEzxsYQMOzI2VvIZ85/view?usp=sharing" class=interesting-link target=_blank>
 <input type=hidden class=link>
 <div class=interesting-link-photo-container>
 <img class=interesting-link-photo src=../imagenes/ALIMENTACION-01-01.png>
@@ -58,7 +58,7 @@ Enlaces de interés
 <p class=interesting-link-title>Alimentación</p>
 <p class=interesting-link-description>Aquí puedes ver cómo ahorrar en un tema tan importante como la comida</p>
 </a>
-<a style="display:none;" href="{{ LINK_ALO }}" class=interesting-link target=_blank>
+<a {{ KILLER_ALO }} href="https://drive.google.com/file/d/1eTzzZyDUcCNLQgI-YKyc27_WTIY_1Oxv/view?usp=sharing" class=interesting-link target=_blank>
 <input type=hidden class=link>
 <div class=interesting-link-photo-container>
 <img class=interesting-link-photo src=../imagenes/ALOJAMIENTO-01-01.png>
@@ -66,7 +66,7 @@ Enlaces de interés
 <p class=interesting-link-title>Alojamiento</p>
 <p class=interesting-link-description>Encuentra recomendaciones y costos para hospedarte durante tu movilidad</p>
 </a>
-<a style="display:none;" href="{{ LINK_TRA }}" class=interesting-link target=_blank>
+<a {{ KILLER_TRA }} href="https://drive.google.com/file/d/1KuccUcnKT_4opCwdLCwExKEP0mTSy1cz/view?usp=sharing" class=interesting-link target=_blank>
 <input type=hidden class=link>
 <div class=interesting-link-photo-container>
 <img class=interesting-link-photo src=../imagenes/TRANSPORTE-01-01.png>
@@ -74,8 +74,7 @@ Enlaces de interés
 <p class=interesting-link-title>Transporte</p>
 <p class=interesting-link-description>Conoce recomendaciones de otros alumnos para trasladarte por la ciudad</p>
 </a>
-<a  href="https://drive.google.com/file/d/12rvEWKo3aIWWTsDtYWEgHAEMzKYwzr2v/view?usp=sharing
-" class=interesting-link target=_blank>
+<a style="display:none;" href="{{ LINK_EXP }}" class=interesting-link target=_blank>
 <input type=hidden class=link>
 <div class=interesting-link-photo-container>
 <img class=interesting-link-photo src=../imagenes/EXPERIENCIAS-01-01.png>
@@ -93,14 +92,14 @@ Enlaces de interés
 </a>
 </div>
 </section>
-<section  class=video-main-container>
+<section style="display:none;" class=video-main-container>
 <div class=video-title-container>
 <p class=video-title>
 Conoce historias
 </p>
 </div>
 <div class=video-container>
-<iframe class=video-player src="https://www.youtube.com/embed/Xu-2bOolRN8" frameborder=0 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class=video-player {{ LINK_VIDEO }} frameborder=0 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </section>
 <script type=text/javascript src=../js/actions.js></script>
