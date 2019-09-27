@@ -142,21 +142,6 @@
         </div>
       </div>
 
-        <!--<div class="university">
-          <div class="univerity-name">
-            <p>Universidad de Barcelona</p>
-            <p><span class="icon-circle-right arrow"></span><span>ver más</span></p>
-          </div>
-          <div class="university-others">
-            <div class="univerity-ranking">
-              <p>#4892</p>
-            </div>
-            <div class="university-strenghts">
-              <p>Algo va aquí</p>
-            </div>
-          </div>
-        </div>-->
-
       </div>
 
     </section>
@@ -209,7 +194,7 @@
             '<div class="university-title-ranking"><p>Ranking QS</p></div>'+
             '</div>'+
             '</div>');
-           // $container.html('<div class="university-title"><div class="univerity-title-name"><p>Universidades</p></div><div class="univerity-title-others"><div class="university-title-ranking"><p>Ranking QS</p></div><div class="university-title-strenghts"><p>Área de mayor fortaleza</p></div></div></div>');
+
            c.schools.forEach(function(school){
              $container.append(
                '<div class="university">' +
@@ -221,9 +206,6 @@
                    '<div class="univerity-ranking">' +
                      '<p>' + ( (c.rankings[i] != 'nope')?c.rankings[i]:'-') + '</p>' +
                    '</div>' +
-                 //   '<div class="university-strenghts">' +
-                 //     '<p>Algo va aquí</p>' +
-                 //   '</div>' +
                  '</div>' +
                '</div>'
              );
@@ -262,13 +244,6 @@
               fill: '#00b2c0'
             }
           },
-          // markers: plants.map(function(h){ return {name: h.name, latLng: h.coords} }),
-          // series: {
-          //     regions: [{
-          //     values: colors
-          //   }],
-          // },
-          // colors: colors,
           series: {
             regions: [{
               attribute: 'fill'
@@ -299,7 +274,6 @@
 
           for (key in mapObj.regions) {
             colors[key] = "#f3f3f3";
-            //colors[key] = "#838383";
           }
           return colors;
         }
